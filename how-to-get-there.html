@@ -12,12 +12,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
         rel="stylesheet" />
     <style>
         /* ===== DESIGN TOKENS ===== */
         :root {
-            --jungle: #1a4a2e;
+            --jungle: #1a3c2a;
             --jungle-mid: #2d6a44;
             --jungle-light: #3d8b5c;
             --jungle-pale: #e8f5ed;
@@ -29,7 +29,7 @@
             --turquoise-pale: #e0f5f4;
             --dark: #0f1f17;
             --dark-mid: #1c3326;
-            --text-primary: #1a1a1a;
+            --text-primary: #1a3c2a;
             --text-secondary: #4a5a50;
             --text-muted: #7a8a80;
             --white: #ffffff;
@@ -59,7 +59,7 @@
         }
 
         body {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Lexend', sans-serif;
             background: var(--surface);
             color: var(--text-primary);
             line-height: 1.6;
@@ -76,7 +76,8 @@
             color: inherit;
         }
 
-        button, select {
+        button,
+        select {
             font-family: inherit;
             cursor: pointer;
             border: none;
@@ -109,18 +110,85 @@
             overflow: hidden;
         }
 
-        .hero-bg {
+        /* ===== CAROUSEL ===== */
+        .carousel-track {
             position: absolute;
             inset: 0;
-            background-image: url('./images/hero_bg_get_there.jpg');
-            background-size: cover;
-            background-position: center;
-            transform: scale(1.05);
-            transition: transform 8s ease;
+            z-index: 0;
         }
 
-        .hero:hover .hero-bg {
+        .carousel-slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.2s ease;
+            transform: scale(1.04);
+            transition: opacity 1.2s ease, transform 8s ease;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
             transform: scale(1);
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: white;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .carousel-btn.prev {
+            left: 1.25rem;
+        }
+
+        .carousel-btn.next {
+            right: 1.25rem;
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 1.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            gap: 8px;
+        }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            padding: 0;
+        }
+
+        .carousel-dot.active {
+            background: var(--gold-light);
+            transform: scale(1.3);
         }
 
         .hero-overlay {
@@ -282,18 +350,39 @@
             background: var(--white);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
-            padding: 2.2rem;
+            padding: 0;
             box-shadow: var(--shadow-sm);
             transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 0;
+            overflow: hidden;
         }
 
         .transport-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-lg);
             border-color: rgba(45, 106, 68, 0.25);
+        }
+
+        .transport-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .transport-card:hover .transport-img {
+            transform: scale(1.04);
+        }
+
+        .transport-card-body {
+            padding: 1.8rem 2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            flex: 1;
         }
 
         .transport-icon {
@@ -331,7 +420,7 @@
             border-radius: var(--radius-sm);
             padding: 8px 12px;
             font-weight: 600;
-            border: 1px solid rgba(45,106,68,0.1);
+            border: 1px solid rgba(45, 106, 68, 0.1);
         }
 
         /* ===== WIDGET: CALCULATOR ===== */
@@ -524,20 +613,43 @@
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: var(--radius-md);
-            padding: 2rem;
+            padding: 0;
             display: flex;
-            gap: 1.2rem;
+            flex-direction: column;
+            gap: 0;
             transition: all 0.3s ease;
+            overflow: hidden;
         }
 
         .local-card:hover {
             border-color: var(--jungle-light);
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .local-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .local-card:hover .local-img {
+            transform: scale(1.04);
+        }
+
+        .local-card-body {
+            padding: 1.4rem 1.6rem 1.6rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
         }
 
         .local-icon {
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin-top: 2px;
+            flex-shrink: 0;
         }
 
         .local-content {
@@ -668,16 +780,37 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero" id="top">
-        <div class="hero-bg" id="heroBg"></div>
+        <!-- Carousel -->
+        <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide active" style="background-image: url('./images/how-to-get-there/1.jpg')"></div>
+            <div class="carousel-slide" style="background-image: url('./images/how-to-get-there/2.jpg')"></div>
+            <div class="carousel-slide" style="background-image: url('./images/how-to-get-there/3.jpg')"></div>
+            <div class="carousel-slide" style="background-image: url('./images/how-to-get-there/4.jpg')"></div>
+            <div class="carousel-slide" style="background-image: url('./images/how-to-get-there/5.jpg')"></div>
+            <div class="carousel-slide" style="background-image: url('./images/how-to-get-there/6.jpg')"></div>
+        </div>
         <div class="hero-overlay"></div>
+        <!-- Arrows -->
+        <button class="carousel-btn prev" id="carouselPrev" aria-label="Previous image">&#8592;</button>
+        <button class="carousel-btn next" id="carouselNext" aria-label="Next image">&#8594;</button>
+        <!-- Dots -->
+        <div class="carousel-dots" id="carouselDots">
+            <button class="carousel-dot active" data-index="0" aria-label="Slide 1"></button>
+            <button class="carousel-dot" data-index="1" aria-label="Slide 2"></button>
+            <button class="carousel-dot" data-index="2" aria-label="Slide 3"></button>
+            <button class="carousel-dot" data-index="3" aria-label="Slide 4"></button>
+            <button class="carousel-dot" data-index="4" aria-label="Slide 5"></button>
+            <button class="carousel-dot" data-index="5" aria-label="Slide 6"></button>
+        </div>
         <div class="hero-content">
-            <div class="hero-badge">Transit Guide &middot; FIFA World Cup 2026</div>
+            <div class="hero-badge">Transit Guide</div>
             <h1 class="hero-title">
                 Getting to<br />
                 <span class="accent">Tabasco</span>
             </h1>
             <p class="hero-subtitle">
-                Designed for World Cup 2026 fans. Plan your trip to Tabasco directly from Mexico's three host cities: Mexico City, Guadalajara, and Monterrey.
+                Designed for World Cup 2026 fans. Plan your trip to Tabasco directly from Mexico's three host cities:
+                Mexico City, Guadalajara, and Monterrey.
             </p>
             <a href="#calculator" class="hero-cta">Plan Your Route</a>
         </div>
@@ -688,34 +821,54 @@
         <div class="container">
             <span class="section-label">Travel Methods</span>
             <h2 class="section-title">Gateway Options from Host Cities</h2>
-            <p class="section-desc">Tabasco is highly accessible from Mexico's three host cities. Select the option that best fits your travel plans.</p>
+            <p class="section-desc">Tabasco is highly accessible from Mexico's three host cities. Select the option that
+                best fits your travel plans.</p>
 
             <div class="transport-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
                 <!-- AIR -->
                 <div class="transport-card">
-                    <div class="transport-icon">✈️</div>
-                    <div class="transport-name">By Air</div>
-                    <div class="transport-hub">Villahermosa Airport (VSA)</div>
-                    <p class="transport-desc">Fly directly to Carlos Rovirosa Pérez International Airport. Multiple daily direct flights connect Villahermosa with Mexico City (CDMX), Guadalajara (GDL), and Monterrey (MTY).</p>
-                    <div class="transport-meta">📍 15 min drive to downtown</div>
+                    <img src="./images/how-to-get-there/airport-vsa.jpg" alt="Villahermosa Airport VSA"
+                        class="transport-img" />
+                    <div class="transport-card-body">
+                        <div class="transport-icon">✈️</div>
+                        <div class="transport-name">By Air</div>
+                        <div class="transport-hub">Villahermosa Airport (VSA)</div>
+                        <p class="transport-desc">Fly directly to Carlos Rovirosa Pérez International Airport. Multiple
+                            daily direct flights connect Villahermosa with Mexico City (CDMX), Guadalajara (GDL), and
+                            Monterrey (MTY).</p>
+                        <div class="transport-meta">📍 15 min drive to downtown</div>
+                    </div>
                 </div>
 
                 <!-- BUS -->
                 <div class="transport-card">
-                    <div class="transport-icon">🚌</div>
-                    <div class="transport-name">First-Class Bus</div>
-                    <div class="transport-hub">ADO Terminal Villahermosa</div>
-                    <p class="transport-desc">ADO offers premium long-distance coaches (ADO GL and ADO Platino) featuring reclining seats, screens, and USB chargers connecting Mexico City (CDMX) directly to Tabasco.</p>
-                    <div class="transport-meta">📍 Central location in Villahermosa</div>
+                    <img src="./images/how-to-get-there/ado-platino.jpg" alt="ADO Platino premium bus"
+                        class="transport-img" />
+                    <div class="transport-card-body">
+                        <div class="transport-icon">🚌</div>
+                        <div class="transport-name">First-Class Bus</div>
+                        <div class="transport-hub">ADO Terminal Villahermosa</div>
+                        <p class="transport-desc">ADO offers premium long-distance coaches (ADO GL and ADO Platino)
+                            featuring reclining seats, screens, and USB chargers connecting Mexico City (CDMX) directly
+                            to
+                            Tabasco.</p>
+                        <div class="transport-meta">📍 Central location in Villahermosa</div>
+                    </div>
                 </div>
 
                 <!-- ROAD -->
                 <div class="transport-card">
-                    <div class="transport-icon">🚗</div>
-                    <div class="transport-name">Driving / Road</div>
-                    <div class="transport-hub">Federal Toll Highways</div>
-                    <p class="transport-desc">Well-connected federal toll roads link Tabasco to Mexico City (via Highway 180D). Secure and well-maintained roads make it ideal for groups of fans.</p>
-                    <div class="transport-meta">📍 Toll roads highly recommended</div>
+                    <img src="./images/how-to-get-there/highway-mexico.jpg" alt="Mexico federal toll highway"
+                        class="transport-img" />
+                    <div class="transport-card-body">
+                        <div class="transport-icon">🚗</div>
+                        <div class="transport-name">Driving / Road</div>
+                        <div class="transport-hub">Federal Toll Highways</div>
+                        <p class="transport-desc">Well-connected federal toll roads link Tabasco to Mexico City (via
+                            Highway
+                            180D). Secure and well-maintained roads make it ideal for groups of fans.</p>
+                        <div class="transport-meta">📍 Toll roads highly recommended</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -728,7 +881,8 @@
                 <div class="calc-header">
                     <span class="section-label" style="color:var(--gold-light)">Interactive Planner</span>
                     <h2 class="section-title">Route & Cost Calculator</h2>
-                    <p class="section-desc">Estimate your travel times, average costs, and find direct links to purchase tickets.</p>
+                    <p class="section-desc">Estimate your travel times, average costs, and find direct links to purchase
+                        tickets.</p>
                 </div>
 
                 <div class="calc-grid">
@@ -736,9 +890,9 @@
                         <div class="form-group">
                             <label class="form-label" for="startPoint">Departure Host City</label>
                             <select id="startPoint" class="form-select" onchange="calculateRoute()">
-                                <option value="cdmx">Mexico City (CDMX) - Host City</option>
-                                <option value="guadalajara">Guadalajara (GDL) - Host City</option>
-                                <option value="monterrey">Monterrey (MTY) - Host City</option>
+                                <option value="cdmx">Mexico City (CDMX) - Villahermosa (TAB)</option>
+                                <option value="guadalajara">Guadalajara (GDL) - Villahermosa (TAB)</option>
+                                <option value="monterrey">Monterrey (MTY) - Villahermosa (TAB)</option>
                             </select>
                         </div>
 
@@ -766,10 +920,12 @@
 
                         <div class="result-details">
                             <h3 class="result-title" id="resTitle">Direct Flights to Villahermosa</h3>
-                            <p class="result-text" id="resText">Aeromexico, Volaris, and VivaAerobus offer multiple daily direct flights from AICM or AIFA airports to Villahermosa (VSA).</p>
+                            <p class="result-text" id="resText">Aeromexico, Volaris, and VivaAerobus offer multiple
+                                daily direct flights from AICM or AIFA airports to Villahermosa (VSA).</p>
                         </div>
 
-                        <a href="https://www.google.com/flights" target="_blank" rel="noopener" class="result-action-btn" id="resBtn">Book Flights</a>
+                        <a href="https://www.google.com/flights" target="_blank" rel="noopener"
+                            class="result-action-btn" id="resBtn">Book Flights</a>
                     </div>
                 </div>
             </div>
@@ -781,33 +937,46 @@
         <div class="container">
             <span class="section-label">Getting Around</span>
             <h2 class="section-title">Local Transport in Tabasco</h2>
-            <p class="section-desc">Once you arrive, use these reliable local options to travel between Villahermosa, Comalcalco, Paraíso, and other World Cup tourist sites.</p>
+            <p class="section-desc">Once you arrive, use these reliable local options to travel between Villahermosa,
+                Comalcalco, Paraíso, and other World Cup tourist sites.</p>
 
             <div class="local-grid">
                 <!-- TAXIS -->
                 <div class="local-card">
-                    <span class="local-icon">🚕</span>
-                    <div class="local-content">
-                        <h3 class="local-title">Official Taxis</h3>
-                        <p class="local-desc">In Villahermosa, use authorized "Radio Taxis" or airport taxi stands. Always confirm the fare zone before departing, as meters are not used.</p>
+                    <img src="./images/how-to-get-there/taxis.jpg" alt="Official taxis in Villahermosa" class="local-img" />
+                    <div class="local-card-body">
+                        <span class="local-icon">🚕</span>
+                        <div class="local-content">
+                            <h3 class="local-title">Official Taxis</h3>
+                            <p class="local-desc">In Villahermosa, use authorized "Radio Taxis" or airport taxi stands.
+                                Always confirm the fare zone before departing, as meters are not used.</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- COMBIS -->
                 <div class="local-card">
-                    <span class="local-icon">🚐</span>
-                    <div class="local-content">
-                        <h3 class="local-title">Colectivos / Combis</h3>
-                        <p class="local-desc">Inter-municipal passenger vans are cheap and frequent. They leave regularly from terminals in Villahermosa to Paraíso and Comalcalco.</p>
+                    <img src="./images/how-to-get-there/colectivos.jpg" alt="Colectivos vans in Tabasco" class="local-img" />
+                    <div class="local-card-body">
+                        <span class="local-icon">🚐</span>
+                        <div class="local-content">
+                            <h3 class="local-title">Colectivos / Combis</h3>
+                            <p class="local-desc">Inter-municipal passenger vans are cheap and frequent. They leave
+                                regularly from terminals in Villahermosa to Paraíso and Comalcalco.</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- CAR RENTALS -->
                 <div class="local-card">
-                    <span class="local-icon">🚗</span>
-                    <div class="local-content">
-                        <h3 class="local-title">Car Rentals</h3>
-                        <p class="local-desc">Available at Villahermosa Airport (VSA) through major brands. Highly recommended if you want to explore the Cacao Route or Centla swamps at your own pace.</p>
+                    <img src="./images/how-to-get-there/car-rental.jpg" alt="Car rental at Villahermosa Airport" class="local-img" />
+                    <div class="local-card-body">
+                        <span class="local-icon">🚗</span>
+                        <div class="local-content">
+                            <h3 class="local-title">Car Rentals</h3>
+                            <p class="local-desc">Available at Villahermosa Airport (VSA) through major brands. Highly
+                                recommended if you want to explore the Cacao Route or Centla swamps at your own pace.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -819,27 +988,32 @@
         <div class="container">
             <span class="section-label" style="color:var(--turquoise-light)">Crucial Tips</span>
             <h2 class="section-title">Transportation Tips for Tourists</h2>
-            <p class="section-desc">Ensure a safe and comfortable trip across the state during the World Cup matches.</p>
+            <p class="section-desc">Ensure a safe and comfortable trip across the state during the World Cup matches.
+            </p>
             <div class="tips-grid">
                 <div class="tip-card">
                     <div class="tip-icon">🛑</div>
                     <div class="tip-title">Use Toll Roads</div>
-                    <p class="tip-text">When driving, always choose toll roads ("Cuota") instead of free highways ("Libre") for better security, lighting, and road conditions.</p>
+                    <p class="tip-text">When driving, always choose toll roads ("Cuota") instead of free highways
+                        ("Libre") for better security, lighting, and road conditions.</p>
                 </div>
                 <div class="tip-card">
                     <div class="tip-icon">🎫</div>
                     <div class="tip-title">Book ADO Online</div>
-                    <p class="tip-text">ADO bus tickets sell out quickly during major events. Download the ADO app to book in advance and secure first-class seating.</p>
+                    <p class="tip-text">ADO bus tickets sell out quickly during major events. Download the ADO app to
+                        book in advance and secure first-class seating.</p>
                 </div>
                 <div class="tip-card">
                     <div class="tip-icon">📲</div>
                     <div class="tip-title">Offline Maps</div>
-                    <p class="tip-text">Cellular coverage can be spotty in the jungle cacao routes and centla wetlands. Download offline maps (Google Maps) before traveling.</p>
+                    <p class="tip-text">Cellular coverage can be spotty in the jungle cacao routes and centla wetlands.
+                        Download offline maps (Google Maps) before traveling.</p>
                 </div>
                 <div class="tip-card">
                     <div class="tip-icon">💵</div>
                     <div class="tip-title">Cash for Tolls</div>
-                    <p class="tip-text">Highway tolls and local colectivos only accept Mexican Pesos (MXN) in cash. Keep at least $500 - $1000 MXN in smaller bills on hand.</p>
+                    <p class="tip-text">Highway tolls and local colectivos only accept Mexican Pesos (MXN) in cash. Keep
+                        at least $500 - $1000 MXN in smaller bills on hand.</p>
                 </div>
             </div>
         </div>
@@ -847,7 +1021,8 @@
 
     <!-- ===== FOOTER ===== -->
     <footer>
-        <p class="footer-copy">© 2026 Tabasco Tourism &middot; Mexico World Cup 2026. Prices shown are estimates. Always verify directly with the property.</p>
+        <p class="footer-copy">© 2026 Tabasco Tourism &middot; Mexico World Cup 2026. Prices shown are estimates. Always
+            verify directly with the property.</p>
     </footer>
 
     <!-- ===== JAVASCRIPT ===== -->
@@ -880,11 +1055,11 @@
             document.getElementById('resCost').textContent = data.cost;
             document.getElementById('resTitle').textContent = data.title;
             document.getElementById('resText').textContent = data.text;
-            
+
             const btn = document.getElementById('resBtn');
             btn.href = data.link;
             btn.textContent = data.btnText;
-            
+
             // If unavailable, style button differently
             if (data.time === "Unavailable") {
                 btn.style.background = "var(--text-muted)";
@@ -896,18 +1071,43 @@
         }
 
         // Run initially to load first option
-        window.onload = function() {
+        window.onload = function () {
             calculateRoute();
+            initCarousel();
         };
 
-        // Scroll Parallax for Hero
-        const heroBg = document.getElementById('heroBg');
-        window.addEventListener('scroll', () => {
-            const scrolled = window.scrollY;
-            if (scrolled < window.innerHeight) {
-                heroBg.style.transform = `scale(1.05) translateY(${scrolled * 0.3}px)`;
+        // ===== CAROUSEL =====
+        function initCarousel() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            let current = 0;
+            let timer;
+
+            function goTo(index) {
+                slides[current].classList.remove('active');
+                dots[current].classList.remove('active');
+                current = (index + slides.length) % slides.length;
+                slides[current].classList.add('active');
+                dots[current].classList.add('active');
             }
-        }, { passive: true });
+
+            function startAuto() {
+                timer = setInterval(() => goTo(current + 1), 5000);
+            }
+
+            function resetAuto() {
+                clearInterval(timer);
+                startAuto();
+            }
+
+            document.getElementById('carouselNext').addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+            document.getElementById('carouselPrev').addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => { goTo(parseInt(dot.dataset.index)); resetAuto(); });
+            });
+
+            startAuto();
+        }
     </script>
 </body>
 
