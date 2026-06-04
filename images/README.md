@@ -1,10 +1,5 @@
-# 📁 images/ — Instrucciones para Imágenes Reales
+# 📁 images/
 
-Como los servidores web bloquean la descarga automática de imágenes por motivos de seguridad (anti-bots), **este directorio está vacío**. 
-
-Hemos actualizado la lista y removido *Hostal MJ*, *Hotel San Francisco* y *Hacienda Jesús María*. **Ahora la lista cuenta con exactamente 8 hoteles 100% reales y ubicados en el estado de Tabasco**.
-
-Para que la página web luzca correctamente, **debes descargar 10 imágenes reales** (8 hoteles + 2 fondos) y guardarlas exactamente en esta carpeta con los nombres indicados abajo (en formato `.jpg`).
 
 ---
 
@@ -25,14 +20,4 @@ Descarga una imagen para cada lugar y guárdala con el **nombre exacto** (asegú
 | **`hotel_peninsula_frontera.jpg`** | [🔗 Sitio web Hotel Península](http://www.hotelpeninsula.com.mx/#seccion_confort) o buscar "Hotel Peninsula Frontera Tabasco" | Tarjeta: Hotel Península Frontera |
 | **`hotel_arena_de_mar_paraiso.jpg`** | [🔗 Galería Expedia](https://www.expedia.mx/Villahermosa-Hoteles-Hotel-Arena-De-Mar.h33773818.Informacion-Hotel?discovery-landing-offers-overlay=discovery-landing-offers-overlay) o buscar "Hotel Arena de Mar Paraiso Tabasco" | Tarjeta: Hotel Arena de Mar |
 
----
-
-## 📝 Pasos para agregar las imágenes:
-
-1. Utiliza los enlaces directos de la tabla superior o busca en **[Google Imágenes](https://images.google.com)**.
-2. Haz clic derecho sobre la imagen que te guste y selecciona **"Guardar imagen como..."**
-3. Navega hasta esta carpeta: `c:\Users\Manzana\Documents\Antigravity DESK\ACCESS - Web\images\`
-4. Guarda el archivo con el nombre indicado en la primera columna (ej. `marriott_villahermosa.jpg`).
-5. **Recarga tu página web local** y las imágenes aparecerán mágicamente.
-
-*(Nota: Asegúrate de que no se guarden como .webp o .png. Tienen que ser .jpg para que coincidan con el código).*
+--
