@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Discover the culinary richness of Tabasco. Explore the most iconic traditional dishes, ancestral drinks, and unique desserts of Mexico's tropical Eden." />
+    <meta name="keywords"
+        content="Tabasco gastronomy, traditional food Tabasco, pejelagarto, pozol, where to eat Tabasco, Mexican cuisine guide" />
+    <title>Where to Eat in Tabasco — Traditional Gastronomy Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        /* ===== DESIGN TOKENS (Synced with the global design system) ===== */
+        :root {
+            --jungle: #1a3c2a;
+            --jungle-mid: #2d6a44;
+            --jungle-light: #3d8b5c;
+            --jungle-pale: #e8f5ed;
+            --gold: #c9973b;
+            --gold-light: #e8b84b;
+            --gold-pale: #fdf4e3;
+            --turquoise: #1aada8;
+            --turquoise-light: #2ec4bd;
+            --turquoise-pale: #e0f5f4;
+            --dark: #0f1f17;
+            --dark-mid: #1c3326;
+            --text-primary: #1a3c2a;
+            --text-secondary: #4a5a50;
+            --text-muted: #7a8a80;
+            --white: #ffffff;
+            --surface: #f8faf9;
+            --border: #d5e5db;
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --shadow-sm: 0 2px 8px rgba(26, 74, 46, 0.08);
+            --shadow-md: 0 8px 32px rgba(26, 74, 46, 0.12);
+            --shadow-lg: 0 16px 64px rgba(26, 74, 46, 0.18);
+            --shadow-glow: 0 0 40px rgba(201, 151, 59, 0.25);
+        }
+
+        /* ===== RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+            background: var(--surface);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--jungle-pale);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--jungle-mid);
+            border-radius: 4px;
+        }
+
+        /* ===== NAVIGATION BAR ===== */
+        .nav-bar {
+            background: rgba(15, 31, 23, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--gold-light);
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold-light);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--gold-light);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('./images/where-to-eat/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.05);
+            transition: transform 8s ease;
+        }
+
+        .hero:hover .hero-bg {
+            transform: scale(1);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg,
+                    rgba(15, 31, 23, 0.85) 0%,
+                    rgba(26, 74, 46, 0.65) 40%,
+                    rgba(201, 151, 59, 0.25) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            padding: 2rem;
+            max-width: 900px;
+            animation: heroFadeIn 1.2s ease forwards;
+            z-index: 10;
+        }
+
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201, 151, 59, 0.18);
+            border: 1px solid rgba(201, 151, 59, 0.45);
+            backdrop-filter: blur(12px);
+            color: var(--gold-light);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-badge::before {
+            content: '🌶️';
+            font-size: 1em;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 6vw, 4.8rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+        }
+
+        .hero-title .accent {
+            background: linear-gradient(135deg, var(--gold-light), var(--turquoise-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.2vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.88);
+            font-weight: 300;
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 16px 38px;
+            border-radius: 50px;
+            box-shadow: 0 8px 32px rgba(201, 151, 59, 0.45);
+            transition: all 0.3s ease;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 48px rgba(201, 151, 59, 0.6);
+        }
+
+        .hero-cta::after {
+            content: '↓';
+            font-size: 1.1em;
+        }
+
+        /* ===== SECTION WRAPPER ===== */
+        .section {
+            padding: 6rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--turquoise);
+            margin-bottom: 1rem;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--turquoise);
+            border-radius: 2px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--jungle);
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        /* ===== FILTERS BAR ===== */
+        .filters-section {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 61px;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+            padding: 1.1rem 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .filters-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .filter-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            white-space: nowrap;
+        }
+
+        .filter-pills {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            padding: 7px 16px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border: 1.5px solid var(--border);
+            color: var(--text-secondary);
+            background: var(--surface);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+            user-select: none;
+        }
+
+        .pill:hover {
+            border-color: var(--jungle-light);
+            color: var(--jungle);
+            background: var(--jungle-pale);
+        }
+
+        .pill.active {
+            background: var(--jungle);
+            border-color: var(--jungle);
+            color: var(--white);
+        }
+
+        .results-count {
+            margin-left: auto;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .results-count strong {
+            color: var(--jungle);
+        }
+
+        /* ===== FOOD GRID ===== */
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2.2rem;
+            margin-top: 2.5rem;
+        }
+
+        /* ===== FOOD CARD ===== */
+        .food-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .food-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(45, 106, 68, 0.25);
+        }
+
+        .food-card-img-wrap {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+            background: var(--jungle-pale);
+        }
+
+        .food-card-img-wrap img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .food-card:hover .food-card-img-wrap img {
+            transform: scale(1.08);
+        }
+
+        .food-badge {
+            position: absolute;
+            top: 1.1rem;
+            right: 1.1rem;
+            background: rgba(15, 31, 23, 0.8);
+            backdrop-filter: blur(8px);
+            color: var(--gold-light);
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 50px;
+            border: 1px solid rgba(232, 184, 75, 0.3);
+            letter-spacing: 0.05em;
+        }
+
+        .food-card-body {
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            flex: 1;
+        }
+
+        .food-card-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--jungle);
+            line-height: 1.25;
+        }
+
+        .food-card-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            flex: 1;
+        }
+
+        .food-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 0.5rem;
+        }
+
+        .tag {
+            font-size: 0.73rem;
+            font-weight: 600;
+            color: var(--jungle-mid);
+            background: var(--jungle-pale);
+            border-radius: 50px;
+            padding: 4px 12px;
+            border: 1px solid rgba(45, 106, 68, 0.15);
+        }
+
+        .food-card-footer {
+            padding: 1.2rem 1.8rem;
+            border-top: 1px solid var(--border);
+            background: var(--surface);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .food-origin {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 600;
+            color: var(--turquoise);
+        }
+
+        /* ===== FOOD TIPS SECTION ===== */
+        .tips-section {
+            background: linear-gradient(135deg, var(--jungle), var(--dark-mid));
+            padding: 6rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tips-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(201, 151, 59, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.8rem;
+            margin-top: 3.5rem;
+        }
+
+        .tip-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
+            padding: 2.2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            background: rgba(255, 255, 255, 0.09);
+            transform: translateY(-4px);
+            border-color: rgba(232, 184, 75, 0.25);
+        }
+
+        .tip-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .tip-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 0.6rem;
+        }
+
+        .tip-text {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+        }
+
+        .tips-section .section-title {
+            color: var(--white);
+        }
+
+        .tips-section .section-desc {
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark);
+            padding: 3.5rem 1.5rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-copy {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.35);
+            line-height: 1.6;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            opacity: 0;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .filters-inner {
+                gap: 0.75rem;
+            }
+
+            .food-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-bar {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                padding: 4rem 1rem;
+            }
+
+            .hero-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVIGATION BAR ===== -->
+    <nav class="nav-bar">
+        <div class="nav-logo">Tabasco 2026</div>
+        <div class="nav-links">
+            <a href="how-to-get-there.html" class="nav-link">How to Get There</a>
+            <a href="where-to-stay.html" class="nav-link">Where to Stay</a>
+            <a href="where-to-eat.html" class="nav-link active">Gastronomy</a>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top">
+        <div class="hero-bg" id="heroBg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Flavor & Tradition</div>
+            <h1 class="hero-title">
+                Gastronomy of<br />
+                <span class="accent">Tabasco</span>
+            </h1>
+            <p class="hero-subtitle">
+                Explore the "Eden of Mexico" through its pre-Hispanic flavors, exotic local ingredients, millennial cacao drinks, and a unique culinary heritage.
+            </p>
+            <a href="#gastronomy" class="hero-cta">Explore Dishes</a>
+        </div>
+    </section>
+
+    <!-- ===== GASTRONOMIA SECTION ===== -->
+    <section class="section" id="gastronomy">
+        <div class="container">
+            <div style="margin-bottom: 3rem;">
+                <span class="section-label">Recipes from Eden</span>
+                <h2 class="section-title">Tabasco's Culinary Art</h2>
+                <p class="section-desc">
+                    A hand-picked selection of the most traditional dishes, drinks, and desserts that you must experience during your journey.
+                </p>
+            </div>
+
+            <!-- FILTERS BAR -->
+            <div class="filters-section">
+                <div class="filters-inner">
+                    <div class="filter-group">
+                        <span class="filter-label">Category:</span>
+                        <div class="filter-pills">
+                            <button class="pill active" data-filter="all">All</button>
+                            <button class="pill" data-filter="dish">Dishes</button>
+                            <button class="pill" data-filter="drink">Drinks</button>
+                            <button class="pill" data-filter="dessert">Desserts</button>
+                        </div>
+                    </div>
+                    <div class="results-count">
+                        Showing <strong id="resultsCount">9</strong> delicacies
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-grid" id="foodGrid">
+
+                <!-- CARD 1: Pejelagarto Asado -->
+                <article class="food-card fade-up" style="animation-delay: 0s;" data-category="dish">
+                    <div class="food-card-img-wrap">
+                        <span class="food-badge">Dish</span>
+                        <img src="./images/where-to-eat/pejelagarto-asado.jpg" alt="Traditional grilled Pejelagarto garfish" />
+                    </div>
+                    <div class="food-card-body">
+                        <h3 class="food-card-name">Pejelagarto Asado</h3>
+                        <p class="food-card-desc">The ultimate signature dish of Tabasco. A prehistoric freshwater fish grilled slowly over open charcoal embers, served with traditional chimichurri salsa, lime, and fresh tortillas.</p>
+                        <div class="food-card-tags">
+                            <span class="tag">🔥 Charcoal Grilled</span>
+                            <span class="tag">🐟 River Fish</span>
+                            <span class="tag">👑 Iconic</span>
+                        </div>
+                    </div>
+                    <div class="food-card-footer">
+                        <div class="food-origin">📍 Rivers & Lagoons of Tabasco</div>
+                    </div>
+                </article>
+
+                <!-- CARD 2: Tamales de Chipilín -->
+                <article class="food-card fade-up" style="animation-delay: 0.08s;" data-category="dish">
+                    <div class="food-card-img-wrap">
+                        <span class="food-badge">Dish</span>
+                        <img src="./images/where-to-eat/tamales-chipilin.jpg" alt="Tamales de chipilin with tomato salsa" />
+                    </div>
+                    <div class="food-card-body">
+                        <h3 class="food-card-name">Tamales de Chipilín</h3>
+                        <p class="food-card-desc">Delicate tamales made from strained corn dough mixed with chipilín leaves (a wild regional herb). Filled with shredded chicken or cheese and topped with a mild tomato salsa.</p>
+                        <div class="food-card-tags">
+                            <span class="tag">🌿 Wild Herbs</span>
+                            <span class="tag">🌽 Nixtamalized Corn</span>
+                            <span class="tag">🍽️ Traditional</span>
+                        </div>
+                    </div>
+                    <div class="food-card-footer">
+                        <div class="food-origin">📍 Statewide</div>
+                    </div>
+                </article>
+
+                <!-- CARD 3: Chanchamitos -->
+                <article class="food-card fade-up" style="animation-delay: 0.16s;" data-category="dish">
+                    <div class="food-card-img-wrap">
+                        <span class="food-badge">Dish</span>
+                        <img src="./images/where-to-eat/chanchamitos.jpg" alt="Traditional round chanchamitos tamales" />
+                    </div>
+                    <div class="food-card-body">
+                        <h3 class="food-card-name">Chanchamitos</h3>
+                        <p class="food-card-desc">Small, round tamales wrapped in dry corn husks (totomoxtle) and tied securely at both ends. The dough is seasoned with achiote and lard, filled with slow-cooked pork or chicken.</p>
+                        <div class="food-card-tags">
+                            <span class="tag">🥓 Lard Seasoned</span>
+                            <span class="tag">🍂 In Totomoxtle</span>
+                            <span class="tag">🍖 Pork / Chicken</span>
+                        </div>
+                    </div>
+                    <div class="food-card-footer">
+                        <div class="food-origin">📍 Chontalpa Region</div>
+                    </div>
+                </article>
+
+                <!-- CARD 4: Puchero Tabasqueño -->
+                <article class="food-card fade-up" style="animation-delay: 0.24s;" data-category="dish">
+                    <div class="food-card-img-wrap">
+                        <span class="food-badge">Dish</span>
+                        <img src="./images/where-to-eat/puchero-tabasqueno.jpg" alt="Beef stew with tropical vegetables" />
+                    </div>
+                    <div class="food-card-body">
+                        <h3 class="food-card-name">Puchero Tabasqueño</h3>
+                        <p class="food-card-desc">A hearty and comforting beef broth seasoned with local spices, showcasing regional root vegetables and fruits such as cassava (yuca), macal, sweet potato, and plantain.</p>
+                        <div class="food-card-tags">
+                            <span class="tag">🍲 Warm Broth</span>
+                            <span class="tag">🍠 Local Tubers</span>
+                            <span class="tag">🥩 Beef Stew</span>
+                        </div>
+                    </div>
+                    <div class="food-card-footer">
+                        <div class="food-origin">📍 Home Kitchens</div>
+                    </div>
+                </article>
+
+                <!-- CARD 5: Butifarra de Jalpa -->
+                <article class="food-card fade-up" style="animation-delay: 0.32s;" data-category="dish">
+                    <div class="food-card-img-wrap">
+                        <span class="food-badge">Dish</span>
+                        <img src="./images/where-to-eat/butifarra-jalpa.jpg" alt="Artisanal butifarra pork sausage" />
+                    </div>
+                    <div class="food-card-body">
+                        <h3 class="food-card-name">Butifarra de Jalpa</h3>
+                        <p class="food-card-desc">An artisanal, highly popular pork sausage seasoned with black pepper, nutmeg, and regional spices. Served hot alongside shredded cabbage, lime, and fiery amashito pepper.</p>
+                        <div class="food-card-tags">
+                            <span class="tag">🍖 Pork Sausage</span>
+                            <span class="tag">🌶️ Amashito Chili</span>
+                            <span class="tag">🛠️ Artisanal</span>
+                        </div>
+                    </div>
+                    <div class="food-card-footer">
+                        <div class="food-origin">📍 Jalpa de Méndez</div>
+                    </div>
+                </article>
+
+                <!-- CARD 6: Piguas -->
+                <article class="food-card fade-up" style="animation-delay: 0.4s;" data-category="dish">
+                    <div class="food-card-img-wrap">
+                        <span class="food-badge">Dish</span>
+                        <img src="./images/where-to-eat/piguas.jpg" alt="Giant freshwater prawns cooked with garlic" />
+                    </div>
+                    <div class="food-card-body">
+                        <h3 class="food-card-name">Piguas</h3>
+                        <p class="food-card-desc">Exquisite giant freshwater prawns harvested from local rivers, prized as a luxury delicacy. Best prepared with garlic butter (al mojo de ajo) or grilled over charcoal.</p>
+                        <div class="food-card-tags">
+                            <span class="tag">🦐 River Prawns</span>
+                            <span class="tag">🧄 Garlic Butter</span>
+                            <span class="tag">✨ Premium</span>
+                        </div>
+                    </div>
+                    <div class="food-card-footer">
+                        <div class="food-origin">📍 Paraíso & Frontera Coast</div>
+                    </div>
+                </article>
+
+                <!-- CARD 7: Pozol con Cacao -->
+                <article class="food-card fade-up" style="animation-delay: 0.48s;" data-category="drink">
+                    <div class="food-card-img-wrap">
+                        <span class="food-badge">Drink</span>
+                        <img src="./images/where-to-eat/pozol-cacao.jpg" alt="Traditional pozol drink in jicara bowl" />
+                    </div>
+                    <div class="food-card-body">
+                        <h3 class="food-card-name">Pozol con Cacao</h3>
+                        <p class="food-card-desc">The ultimate pre-Hispanic ancestral drink. Made by whisking nixtamalized corn dough and locally harvested cacao paste in cold water. Incredibly refreshing and filling.</p>
+                        <div class="food-card-tags">
+                            <span class="tag">🍫 Organic Cacao</span>
+                            <span class="tag">❄️ Ice Cold</span>
+                            <span class="tag">🧉 Served in Jícara</span>
+                        </div>
+                    </div>
+                    <div class="food-card-footer">
+                        <div class="food-origin">📍 Ancestral Heritage</div>
+                    </div>
+                </article>
+
+                <!-- CARD 8: Chorote -->
+                <article class="food-card fade-up" style="animation-delay: 0.56s;" data-category="drink">
+                    <div class="food-card-img-wrap">
+                        <span class="food-badge">Drink</span>
+                        <img src="./images/where-to-eat/chorote.jpg" alt="Rich thick chorote drink" />
+                    </div>
+                    <div class="food-card-body">
+                        <h3 class="food-card-name">Chorote</h3>
+                        <p class="food-card-desc">A thicker, chocolate-heavy variation of pozol, where toasted corn kernels and fermented cacao beans are ground together to create a deep, chocolatey, texturized beverage.</p>
+                        <div class="food-card-tags">
+                            <span class="tag">🌽 Toasted Corn</span>
+                            <span class="tag">🍫 Extra Cacao</span>
+                            <span class="tag">🧊 Refreshing</span>
+                        </div>
+                    </div>
+                    <div class="food-card-footer">
+                        <div class="food-origin">📍 Traditional Markets</div>
+                    </div>
+                </article>
+
+                <!-- CARD 9: Dulce de Oreja de Mico -->
+                <article class="food-card fade-up" style="animation-delay: 0.64s;" data-category="dessert">
+                    <div class="food-card-img-wrap">
+                        <span class="food-badge">Dessert</span>
+                        <img src="./images/where-to-eat/dulce-oreja-mico.jpg" alt="Sweet oreja de mico papaya dessert" />
+                    </div>
+                    <div class="food-card-body">
+                        <h3 class="food-card-name">Dulce de Oreja de Mico</h3>
+                        <p class="food-card-desc">A classic regional sweet dessert made with a tiny variety of wild papaya. Simmered in dark cane sugar (piloncillo) syrup until it reaches a soft, chewy texture.</p>
+                        <div class="food-card-tags">
+                            <span class="tag">🍯 Cane Syrup</span>
+                            <span class="tag">🍈 Wild Papaya</span>
+                            <span class="tag">🍬 Sweet Treat</span>
+                        </div>
+                    </div>
+                    <div class="food-card-footer">
+                        <div class="food-origin">📍 Homemade Confectionery</div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOD TIPS SECTION ===== -->
+    <section class="tips-section">
+        <div class="container">
+            <span class="section-label" style="color:var(--turquoise-light)">Foodie Guide</span>
+            <h2 class="section-title">Tips for the Culinary Traveler</h2>
+            <p class="section-desc">Make the most of your culinary adventure through the flavors of Tabasco.</p>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🌶️</div>
+                    <div class="tip-title">Respect the Amashito</div>
+                    <p class="tip-text">The tiny amashito chili is a staple on every Tabasco table. It looks small and harmless, but it packs a powerful heat. Test a tiny drop first!</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🧉</div>
+                    <div class="tip-title">Unsweetened Pozol</div>
+                    <p class="tip-text">Authentic pozol is traditionally unsweetened. It is consumed cold to keep you hydrated in the humid weather. Ask for sugar if you prefer a sweeter drink.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🐟</div>
+                    <div class="tip-title">Fresh Catch Palapas</div>
+                    <p class="tip-text">For the best pejelagarto and seafood, head to the coastal palapas in Paraíso or Frontera, where dishes are prepared right next to the river banks.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🍫</div>
+                    <div class="tip-title">Cacao Hacienda Tours</div>
+                    <p class="tip-text">Comalcalco is the heart of Mexican cacao. Take a guided tour of a cacao hacienda to taste raw cacao seeds fresh from the pod and learn chocolate history.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p class="footer-copy">© 2026 Tabasco Tourism. Developed to share the rich culinary heritage of Mexico's Eden.</p>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Filtering Logic
+        const pills = document.querySelectorAll('.pill');
+        const cards = document.querySelectorAll('.food-card');
+        const resultsCountEl = document.getElementById('resultsCount');
+
+        pills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                // Remove active class from all pills
+                pills.forEach(p => p.classList.remove('active'));
+                // Add active class to clicked pill
+                pill.classList.add('active');
+
+                const filter = pill.getAttribute('data-filter');
+                let count = 0;
+
+                cards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'flex';
+                        count++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                resultsCountEl.textContent = count;
+            });
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // Hero parallax scroll
+        const heroBg = document.getElementById('heroBg');
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            if (scrolled < window.innerHeight) {
+                heroBg.style.transform = `scale(1.05) translateY(${scrolled * 0.3}px)`;
+            }
+        }, { passive: true });
+    </script>
+
+</body>
+
+</html>
