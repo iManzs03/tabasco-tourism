@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Learn how to travel to Tabasco, Mexico for the FIFA World Cup 2026. Explore transport routes from the three official host cities: Mexico City, Guadalajara, and Monterrey." />
+    <meta name="keywords"
+        content="travel to Tabasco, Villahermosa airport, World Cup 2026 transport, host cities to Tabasco, how to get to Tabasco" />
+    <title>How to Get to Tabasco — Mexico World Cup 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        /* ===== DESIGN TOKENS ===== */
+        :root {
+            --jungle: #1a4a2e;
+            --jungle-mid: #2d6a44;
+            --jungle-light: #3d8b5c;
+            --jungle-pale: #e8f5ed;
+            --gold: #c9973b;
+            --gold-light: #e8b84b;
+            --gold-pale: #fdf4e3;
+            --turquoise: #1aada8;
+            --turquoise-light: #2ec4bd;
+            --turquoise-pale: #e0f5f4;
+            --dark: #0f1f17;
+            --dark-mid: #1c3326;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a5a50;
+            --text-muted: #7a8a80;
+            --white: #ffffff;
+            --surface: #f8faf9;
+            --border: #d5e5db;
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --shadow-sm: 0 2px 8px rgba(26, 74, 46, 0.08);
+            --shadow-md: 0 8px 32px rgba(26, 74, 46, 0.12);
+            --shadow-lg: 0 16px 64px rgba(26, 74, 46, 0.18);
+            --shadow-glow: 0 0 40px rgba(201, 151, 59, 0.25);
+        }
+
+        /* ===== RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--surface);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button, select {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--jungle-pale);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--jungle-mid);
+            border-radius: 4px;
+        }
+
+
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('./images/hero_bg_get_there.jpg');
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.05);
+            transition: transform 8s ease;
+        }
+
+        .hero:hover .hero-bg {
+            transform: scale(1);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg,
+                    rgba(15, 31, 23, 0.8) 0%,
+                    rgba(26, 74, 46, 0.6) 40%,
+                    rgba(201, 151, 59, 0.25) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            padding: 2rem;
+            max-width: 900px;
+            animation: heroFadeIn 1.2s ease forwards;
+        }
+
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201, 151, 59, 0.18);
+            border: 1px solid rgba(201, 151, 59, 0.45);
+            backdrop-filter: blur(12px);
+            color: var(--gold-light);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-badge::before {
+            content: '✈️';
+            font-size: 1em;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.6rem, 6vw, 4.8rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+        }
+
+        .hero-title .accent {
+            background: linear-gradient(135deg, var(--gold-light), var(--turquoise-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.2vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 300;
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 16px 36px;
+            border-radius: 50px;
+            box-shadow: 0 8px 32px rgba(201, 151, 59, 0.45);
+            transition: all 0.3s ease;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 48px rgba(201, 151, 59, 0.6);
+        }
+
+        .hero-cta::after {
+            content: '↓';
+            font-size: 1.1em;
+        }
+
+        /* ===== SECTION WRAPPER ===== */
+        .section {
+            padding: 5rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--turquoise);
+            margin-bottom: 1rem;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--turquoise);
+            border-radius: 2px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+            color: var(--jungle);
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        /* ===== TRANSPORT GRID ===== */
+        .transport-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 3.5rem;
+        }
+
+        .transport-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2.2rem;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .transport-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(45, 106, 68, 0.25);
+        }
+
+        .transport-icon {
+            font-size: 2.5rem;
+            color: var(--turquoise);
+            margin-bottom: 0.5rem;
+        }
+
+        .transport-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--jungle);
+        }
+
+        .transport-hub {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .transport-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            flex: 1;
+        }
+
+        .transport-meta {
+            font-size: 0.8rem;
+            background: var(--jungle-pale);
+            color: var(--jungle-mid);
+            border-radius: var(--radius-sm);
+            padding: 8px 12px;
+            font-weight: 600;
+            border: 1px solid rgba(45,106,68,0.1);
+        }
+
+        /* ===== WIDGET: CALCULATOR ===== */
+        .calc-section {
+            background: linear-gradient(135deg, var(--jungle), var(--dark-mid));
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-xl);
+            padding: 4.5rem 3rem;
+            color: var(--white);
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 4rem;
+        }
+
+        .calc-section::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -20%;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(201, 151, 59, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .calc-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .calc-header .section-title {
+            color: var(--white);
+        }
+
+        .calc-header .section-desc {
+            color: rgba(255, 255, 255, 0.65);
+            margin: 0 auto;
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .calc-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 2.2rem;
+            backdrop-filter: blur(12px);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .form-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .form-select {
+            background: rgba(15, 31, 23, 0.7);
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            padding: 12px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            font-weight: 500;
+            outline: none;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .form-select:focus {
+            border-color: var(--gold-light);
+            box-shadow: 0 0 12px rgba(232, 184, 75, 0.25);
+        }
+
+        .form-select option {
+            background: var(--dark-mid);
+            color: var(--white);
+        }
+
+        .calc-results {
+            background: rgba(15, 31, 23, 0.6);
+            border: 1.5px solid rgba(201, 151, 59, 0.25);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            position: relative;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .result-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1.5rem;
+        }
+
+        .stat-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 4px;
+        }
+
+        .stat-val {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--gold-light);
+        }
+
+        .result-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .result-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .result-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .result-action-btn {
+            align-self: flex-start;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--turquoise);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(26, 173, 168, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .result-action-btn:hover {
+            background: var(--turquoise-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(26, 173, 168, 0.5);
+        }
+
+        /* ===== LOCAL TRANSPORT ===== */
+        .local-section {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .local-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3.5rem;
+        }
+
+        .local-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            display: flex;
+            gap: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .local-card:hover {
+            border-color: var(--jungle-light);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .local-icon {
+            font-size: 2.2rem;
+            margin-top: 2px;
+        }
+
+        .local-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .local-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--jungle);
+        }
+
+        .local-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ===== TIPS SECTION ===== */
+        .tips-section {
+            background: linear-gradient(135deg, var(--jungle), var(--dark-mid));
+            padding: 5rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tips-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(201, 151, 59, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .tip-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .tip-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .tip-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-text {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+        }
+
+        .tips-section .section-title {
+            color: var(--white);
+        }
+
+        .tips-section .section-desc {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark);
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-copy {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.35);
+            line-height: 1.6;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 850px) {
+            .calc-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                padding: 4rem 1rem;
+            }
+
+            .hero-content {
+                padding: 1rem;
+            }
+
+            .calc-section {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top">
+        <div class="hero-bg" id="heroBg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Transit Guide &middot; FIFA World Cup 2026</div>
+            <h1 class="hero-title">
+                Getting to<br />
+                <span class="accent">Tabasco</span>
+            </h1>
+            <p class="hero-subtitle">
+                Designed for World Cup 2026 fans. Plan your trip to Tabasco directly from Mexico's three host cities: Mexico City, Guadalajara, and Monterrey.
+            </p>
+            <a href="#calculator" class="hero-cta">Plan Your Route</a>
+        </div>
+    </section>
+
+    <!-- ===== TRANSPORTATION GUIDE ===== -->
+    <section class="section" id="options">
+        <div class="container">
+            <span class="section-label">Travel Methods</span>
+            <h2 class="section-title">Gateway Options from Host Cities</h2>
+            <p class="section-desc">Tabasco is highly accessible from Mexico's three host cities. Select the option that best fits your travel plans.</p>
+
+            <div class="transport-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <!-- AIR -->
+                <div class="transport-card">
+                    <div class="transport-icon">✈️</div>
+                    <div class="transport-name">By Air</div>
+                    <div class="transport-hub">Villahermosa Airport (VSA)</div>
+                    <p class="transport-desc">Fly directly to Carlos Rovirosa Pérez International Airport. Multiple daily direct flights connect Villahermosa with Mexico City (CDMX), Guadalajara (GDL), and Monterrey (MTY).</p>
+                    <div class="transport-meta">📍 15 min drive to downtown</div>
+                </div>
+
+                <!-- BUS -->
+                <div class="transport-card">
+                    <div class="transport-icon">🚌</div>
+                    <div class="transport-name">First-Class Bus</div>
+                    <div class="transport-hub">ADO Terminal Villahermosa</div>
+                    <p class="transport-desc">ADO offers premium long-distance coaches (ADO GL and ADO Platino) featuring reclining seats, screens, and USB chargers connecting Mexico City (CDMX) directly to Tabasco.</p>
+                    <div class="transport-meta">📍 Central location in Villahermosa</div>
+                </div>
+
+                <!-- ROAD -->
+                <div class="transport-card">
+                    <div class="transport-icon">🚗</div>
+                    <div class="transport-name">Driving / Road</div>
+                    <div class="transport-hub">Federal Toll Highways</div>
+                    <p class="transport-desc">Well-connected federal toll roads link Tabasco to Mexico City (via Highway 180D). Secure and well-maintained roads make it ideal for groups of fans.</p>
+                    <div class="transport-meta">📍 Toll roads highly recommended</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WIDGET: CALCULATOR ===== -->
+    <section class="section" id="calculator" style="padding-top: 0;">
+        <div class="container">
+            <div class="calc-section">
+                <div class="calc-header">
+                    <span class="section-label" style="color:var(--gold-light)">Interactive Planner</span>
+                    <h2 class="section-title">Route & Cost Calculator</h2>
+                    <p class="section-desc">Estimate your travel times, average costs, and find direct links to purchase tickets.</p>
+                </div>
+
+                <div class="calc-grid">
+                    <div class="calc-form">
+                        <div class="form-group">
+                            <label class="form-label" for="startPoint">Departure Host City</label>
+                            <select id="startPoint" class="form-select" onchange="calculateRoute()">
+                                <option value="cdmx">Mexico City (CDMX) - Host City</option>
+                                <option value="guadalajara">Guadalajara (GDL) - Host City</option>
+                                <option value="monterrey">Monterrey (MTY) - Host City</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="travelMethod">Travel Method</label>
+                            <select id="travelMethod" class="form-select" onchange="calculateRoute()">
+                                <option value="plane">✈️ Plane (Avión)</option>
+                                <option value="bus">🚌 First-Class Bus (Autobús)</option>
+                                <option value="car">🚗 Automobile (Carretera)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="calc-results" id="calcResults">
+                        <div class="result-stats">
+                            <div class="stat-box">
+                                <span class="stat-label">Travel Time</span>
+                                <span class="stat-val" id="resTime">1h 20m</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-label">Avg. Cost</span>
+                                <span class="stat-val" id="resCost">$80 - $180 USD</span>
+                            </div>
+                        </div>
+
+                        <div class="result-details">
+                            <h3 class="result-title" id="resTitle">Direct Flights to Villahermosa</h3>
+                            <p class="result-text" id="resText">Aeromexico, Volaris, and VivaAerobus offer multiple daily direct flights from AICM or AIFA airports to Villahermosa (VSA).</p>
+                        </div>
+
+                        <a href="https://www.google.com/flights" target="_blank" rel="noopener" class="result-action-btn" id="resBtn">Book Flights</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOCAL TRANSPORTATION ===== -->
+    <section class="section local-section" id="local">
+        <div class="container">
+            <span class="section-label">Getting Around</span>
+            <h2 class="section-title">Local Transport in Tabasco</h2>
+            <p class="section-desc">Once you arrive, use these reliable local options to travel between Villahermosa, Comalcalco, Paraíso, and other World Cup tourist sites.</p>
+
+            <div class="local-grid">
+                <!-- TAXIS -->
+                <div class="local-card">
+                    <span class="local-icon">🚕</span>
+                    <div class="local-content">
+                        <h3 class="local-title">Official Taxis</h3>
+                        <p class="local-desc">In Villahermosa, use authorized "Radio Taxis" or airport taxi stands. Always confirm the fare zone before departing, as meters are not used.</p>
+                    </div>
+                </div>
+
+                <!-- COMBIS -->
+                <div class="local-card">
+                    <span class="local-icon">🚐</span>
+                    <div class="local-content">
+                        <h3 class="local-title">Colectivos / Combis</h3>
+                        <p class="local-desc">Inter-municipal passenger vans are cheap and frequent. They leave regularly from terminals in Villahermosa to Paraíso and Comalcalco.</p>
+                    </div>
+                </div>
+
+                <!-- CAR RENTALS -->
+                <div class="local-card">
+                    <span class="local-icon">🚗</span>
+                    <div class="local-content">
+                        <h3 class="local-title">Car Rentals</h3>
+                        <p class="local-desc">Available at Villahermosa Airport (VSA) through major brands. Highly recommended if you want to explore the Cacao Route or Centla swamps at your own pace.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TRAVEL TIPS ===== -->
+    <section class="tips-section">
+        <div class="container">
+            <span class="section-label" style="color:var(--turquoise-light)">Crucial Tips</span>
+            <h2 class="section-title">Transportation Tips for Tourists</h2>
+            <p class="section-desc">Ensure a safe and comfortable trip across the state during the World Cup matches.</p>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🛑</div>
+                    <div class="tip-title">Use Toll Roads</div>
+                    <p class="tip-text">When driving, always choose toll roads ("Cuota") instead of free highways ("Libre") for better security, lighting, and road conditions.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🎫</div>
+                    <div class="tip-title">Book ADO Online</div>
+                    <p class="tip-text">ADO bus tickets sell out quickly during major events. Download the ADO app to book in advance and secure first-class seating.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">📲</div>
+                    <div class="tip-title">Offline Maps</div>
+                    <p class="tip-text">Cellular coverage can be spotty in the jungle cacao routes and centla wetlands. Download offline maps (Google Maps) before traveling.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">💵</div>
+                    <div class="tip-title">Cash for Tolls</div>
+                    <p class="tip-text">Highway tolls and local colectivos only accept Mexican Pesos (MXN) in cash. Keep at least $500 - $1000 MXN in smaller bills on hand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p class="footer-copy">© 2026 Tabasco Tourism &middot; Mexico World Cup 2026. Prices shown are estimates. Always verify directly with the property.</p>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Route Calculator Data
+        const routeData = {
+            cdmx: {
+                plane: { time: "1h 20m", cost: "$80 - $180 USD", title: "Direct Flights to Villahermosa", text: "Aeromexico, Volaris, and VivaAerobus offer multiple daily direct flights from AICM or AIFA airports to Villahermosa (VSA).", link: "https://www.google.com/flights", btnText: "Search Flights" },
+                bus: { time: "10h 30m", cost: "$40 - $70 USD", title: "Premium ADO Coaches", text: "First-class ADO Platino and GL buses run overnight from TAPO terminal in CDMX to Villahermosa Central Terminal.", link: "https://www.ado.com.mx", btnText: "Book Bus Tickets" },
+                car: { time: "9h 00m", cost: "$60 - $100 USD", title: "Driving via Highway 180D", text: "Drive via Federal Highway 180D (Coatzacoalcos-Villahermosa toll road). Expect beautiful scenery and secure tolls.", link: "https://www.google.com/maps", btnText: "View Driving Route" }
+            },
+            guadalajara: {
+                plane: { time: "1h 50m", cost: "$85 - $190 USD", title: "Direct Flights to Villahermosa", text: "Volaris and VivaAerobus offer direct flights from Guadalajara (GDL) to Villahermosa (VSA) Airport.", link: "https://www.google.com/flights", btnText: "Search Flights" },
+                bus: { time: "16h 00m", cost: "$70 - $110 USD", title: "ETN & Luxury Buses", text: "ETN and Primera Plus offer luxury coaches to Villahermosa. It is a long journey (16+ hours), flying is recommended.", link: "https://www.ado.com.mx", btnText: "Check Bus Tickets" },
+                car: { time: "14h 00m", cost: "$120 - $180 USD", title: "Driving via Highway 15D & 180D", text: "Take Highway 15D and Highway 180D toll roads. This is a very long drive (14+ hours), best split into two days.", link: "https://www.google.com/maps", btnText: "View Driving Route" }
+            },
+            monterrey: {
+                plane: { time: "2h 00m", cost: "$90 - $220 USD", title: "Direct Flights to Villahermosa", text: "VivaAerobus offers regular direct flights from Monterrey (MTY) to Villahermosa (VSA) Airport.", link: "https://www.google.com/flights", btnText: "Search Flights" },
+                bus: { time: "22h 00m", cost: "$90 - $140 USD", title: "Long-Distance Coach", text: "Futura and ADO offer buses, but it is a very long trip (over 22 hours). Flying is strongly recommended.", link: "#options", btnText: "Fly Instead" },
+                car: { time: "18h 00m", cost: "$150 - $250 USD", title: "Driving via Gulf Coast", text: "A massive 18-hour drive. Drive via Tampico, Tuxpan, and Coatzacoalcos on Highway 180. Best split into 2 days.", link: "https://www.google.com/maps", btnText: "View Driving Route" }
+            }
+        };
+
+        function calculateRoute() {
+            const start = document.getElementById('startPoint').value;
+            const method = document.getElementById('travelMethod').value;
+            const data = routeData[start][method];
+
+            document.getElementById('resTime').textContent = data.time;
+            document.getElementById('resCost').textContent = data.cost;
+            document.getElementById('resTitle').textContent = data.title;
+            document.getElementById('resText').textContent = data.text;
+            
+            const btn = document.getElementById('resBtn');
+            btn.href = data.link;
+            btn.textContent = data.btnText;
+            
+            // If unavailable, style button differently
+            if (data.time === "Unavailable") {
+                btn.style.background = "var(--text-muted)";
+                btn.style.boxShadow = "none";
+            } else {
+                btn.style.background = "var(--turquoise)";
+                btn.style.boxShadow = "0 4px 15px rgba(26, 173, 168, 0.3)";
+            }
+        }
+
+        // Run initially to load first option
+        window.onload = function() {
+            calculateRoute();
+        };
+
+        // Scroll Parallax for Hero
+        const heroBg = document.getElementById('heroBg');
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            if (scrolled < window.innerHeight) {
+                heroBg.style.transform = `scale(1.05) translateY(${scrolled * 0.3}px)`;
+            }
+        }, { passive: true });
+    </script>
+</body>
+
+</html>

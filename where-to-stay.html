@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Find the best places to stay in Tabasco, Mexico. Explore hotels, eco-lodges, and guesthouses across Villahermosa, Comalcalco, Paraíso, and more." />
+    <meta name="keywords"
+        content="Tabasco Mexico hotels, Tabasco accommodation, Villahermosa hotels, where to stay Tabasco, Mexico tourism" />
+    <title>Where to Stay in Tabasco — Accommodation Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        /* ===== DESIGN TOKENS ===== */
+        :root {
+            --jungle: #1a4a2e;
+            --jungle-mid: #2d6a44;
+            --jungle-light: #3d8b5c;
+            --jungle-pale: #e8f5ed;
+            --gold: #c9973b;
+            --gold-light: #e8b84b;
+            --gold-pale: #fdf4e3;
+            --turquoise: #1aada8;
+            --turquoise-light: #2ec4bd;
+            --turquoise-pale: #e0f5f4;
+            --dark: #0f1f17;
+            --dark-mid: #1c3326;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a5a50;
+            --text-muted: #7a8a80;
+            --white: #ffffff;
+            --surface: #f8faf9;
+            --border: #d5e5db;
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --shadow-sm: 0 2px 8px rgba(26, 74, 46, 0.08);
+            --shadow-md: 0 8px 32px rgba(26, 74, 46, 0.12);
+            --shadow-lg: 0 16px 64px rgba(26, 74, 46, 0.18);
+            --shadow-glow: 0 0 40px rgba(201, 151, 59, 0.25);
+        }
+
+        /* ===== RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--surface);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--jungle-pale);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--jungle-mid);
+            border-radius: 4px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('./images/hero_bg_tabasco.jpg');
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.05);
+            transition: transform 8s ease;
+        }
+
+        .hero:hover .hero-bg {
+            transform: scale(1);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg,
+                    rgba(15, 31, 23, 0.75) 0%,
+                    rgba(26, 74, 46, 0.55) 40%,
+                    rgba(201, 151, 59, 0.2) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            padding: 2rem;
+            max-width: 900px;
+            animation: heroFadeIn 1.2s ease forwards;
+        }
+
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201, 151, 59, 0.18);
+            border: 1px solid rgba(201, 151, 59, 0.45);
+            backdrop-filter: blur(12px);
+            color: var(--gold-light);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-badge::before {
+            content: '⚽';
+            font-size: 1em;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-title .accent {
+            background: linear-gradient(135deg, var(--gold-light), var(--turquoise-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 16px 36px;
+            border-radius: 50px;
+            box-shadow: 0 8px 32px rgba(201, 151, 59, 0.45);
+            transition: all 0.3s ease;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 48px rgba(201, 151, 59, 0.6);
+        }
+
+        .hero-cta::after {
+            content: '↓';
+            font-size: 1.1em;
+        }
+
+        .hero-stats {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 2rem;
+            background: rgba(15, 31, 23, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-lg);
+            padding: 1rem 2.5rem;
+            animation: heroFadeIn 1.4s 0.3s both;
+        }
+
+        .hero-stat {
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-stat-num {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--gold-light);
+            display: block;
+        }
+
+        .hero-stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .hero-divider {
+            width: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            align-self: stretch;
+        }
+
+        /* ===== SECTION WRAPPER ===== */
+        .section {
+            padding: 6rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--turquoise);
+            margin-bottom: 1rem;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--turquoise);
+            border-radius: 2px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--jungle);
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 560px;
+            line-height: 1.8;
+        }
+
+        /* ===== FILTERS BAR ===== */
+        .filters-section {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+            padding: 1rem 1.5rem;
+        }
+
+        .filters-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            white-space: nowrap;
+        }
+
+        .filter-pills {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border: 1.5px solid var(--border);
+            color: var(--text-secondary);
+            background: var(--surface);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+            user-select: none;
+        }
+
+        .pill:hover {
+            border-color: var(--jungle-light);
+            color: var(--jungle);
+            background: var(--jungle-pale);
+        }
+
+        .pill.active {
+            background: var(--jungle);
+            border-color: var(--jungle);
+            color: var(--white);
+        }
+
+        .filter-divider {
+            width: 1px;
+            height: 28px;
+            background: var(--border);
+            flex-shrink: 0;
+        }
+
+        .price-range {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .price-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            flex: 1;
+            height: 4px;
+            background: linear-gradient(to right, var(--jungle) 0%, var(--jungle) var(--val, 60%), var(--border) var(--val, 60%));
+            border-radius: 2px;
+            outline: none;
+        }
+
+        .price-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--jungle);
+            cursor: pointer;
+            border: 3px solid var(--white);
+            box-shadow: 0 2px 8px rgba(26, 74, 46, 0.3);
+        }
+
+        .price-display {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--jungle);
+            white-space: nowrap;
+            min-width: 80px;
+        }
+
+        .results-count {
+            margin-left: auto;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .results-count strong {
+            color: var(--jungle);
+        }
+
+        /* ===== HOTEL GRID ===== */
+        .hotels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        /* ===== HOTEL CARD ===== */
+        .hotel-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(45, 106, 68, 0.25);
+        }
+
+        .hotel-card-img-wrap {
+            position: relative;
+            height: 230px;
+            overflow: hidden;
+        }
+
+        .hotel-card-img-wrap img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .hotel-card:hover .hotel-card-img-wrap img {
+            transform: scale(1.08);
+        }
+
+
+
+        .hotel-card-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            flex: 1;
+        }
+
+        .hotel-card-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--jungle);
+            line-height: 1.25;
+        }
+
+        .hotel-card-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .hotel-card-amenities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .amenity-tag {
+            font-size: 0.73rem;
+            font-weight: 600;
+            color: var(--jungle-mid);
+            background: var(--jungle-pale);
+            border-radius: 50px;
+            padding: 3px 10px;
+            border: 1px solid rgba(45, 106, 68, 0.15);
+        }
+
+        .hotel-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            border-top: 1px solid var(--border);
+            background: var(--surface);
+            gap: 1rem;
+        }
+
+        .hotel-price {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hotel-price-label {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .hotel-price-value {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--jungle);
+            line-height: 1;
+        }
+
+        .hotel-price-value span {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .book-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, var(--jungle), var(--jungle-mid));
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 10px 22px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .book-btn:hover {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 151, 59, 0.4);
+        }
+
+        .book-btn::after {
+            content: '→';
+        }
+
+        /* ===== NO RESULTS ===== */
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 4rem 2rem;
+            display: none;
+        }
+
+        .no-results.visible {
+            display: block;
+        }
+
+        .no-results-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .no-results h3 {
+            font-size: 1.3rem;
+            color: var(--jungle);
+            margin-bottom: 0.5rem;
+        }
+
+        .no-results p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* ===== TIPS SECTION ===== */
+        .tips-section {
+            background: linear-gradient(135deg, var(--jungle), var(--dark-mid));
+            padding: 5rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tips-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(201, 151, 59, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .tip-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .tip-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .tip-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-text {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+        }
+
+        .tips-section .section-title {
+            color: var(--white);
+        }
+
+        .tips-section .section-desc {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark);
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gold-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-tagline {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.5);
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-copy {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            opacity: 0;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        /* ===== CREDITS SECTION ===== */
+        .credits-section {
+            background: var(--white);
+            padding: 5rem 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .credits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .credit-card {
+            display: flex;
+            gap: 1.25rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            transition: all 0.25s ease;
+        }
+
+        .credit-card:hover {
+            border-color: var(--jungle-light);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .credit-icon {
+            font-size: 1.75rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .credit-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .credit-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--jungle);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.6rem;
+        }
+
+        .credit-text {
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+
+        .credit-text a,
+        .credit-list a {
+            color: var(--turquoise);
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .credit-text a:hover,
+        .credit-list a:hover {
+            color: var(--jungle);
+        }
+
+        .credit-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .credit-list li {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            padding-left: 1rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .credit-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--turquoise);
+            font-size: 0.75rem;
+        }
+
+        .credit-files {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 0.75rem;
+            background: var(--jungle-pale);
+            border-radius: var(--radius-sm);
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(45, 106, 68, 0.12);
+        }
+
+        .credit-file {
+            font-size: 0.75rem;
+            font-family: monospace;
+            color: var(--jungle-mid);
+            line-height: 1.6;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero-stats {
+                display: none;
+            }
+
+            .filters-inner {
+                gap: 0.75rem;
+            }
+
+            .hotels-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-divider {
+                display: none;
+            }
+
+            .price-range {
+                min-width: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                padding: 4rem 1rem;
+            }
+
+            .hero-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top">
+        <div class="hero-bg" id="heroBg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Tabasco, Mexico</div>
+            <h1 class="hero-title">
+                Where to Stay in<br />
+                <span class="accent">Tabasco</span>
+            </h1>
+            <p class="hero-subtitle">
+                From jungle eco-lodges to city luxury hotels — discover the perfect place to rest after a day exploring
+                the heart of Mexico.
+            </p>
+            <a href="#hotels" class="hero-cta">Explore Accommodations</a>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="hero-stat-num">60+</span>
+                <span class="hero-stat-label">Hotels Listed</span>
+            </div>
+            <div class="hero-divider"></div>
+            <div class="hero-stat">
+                <span class="hero-stat-num">17</span>
+                <span class="hero-stat-label">Municipalities</span>
+            </div>
+            <div class="hero-divider"></div>
+            <div class="hero-stat">
+                <span class="hero-stat-num">$25</span>
+                <span class="hero-stat-label">Starting / night</span>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ===== HOTELS GRID ===== -->
+    <section class="section" id="hotels">
+        <div class="container">
+            <div style="margin-bottom: 3rem;">
+                <span class="section-label">Curated Selection</span>
+                <h2 class="section-title">Find Your Perfect Stay</h2>
+                <p class="section-desc">Hand-picked accommodations across Tabasco's most beautiful destinations — for
+                    every budget and travel style.</p>
+            </div>
+
+            <div class="hotels-grid" id="hotelsGrid">
+
+                <!-- CARD 1 -->
+                <article class="hotel-card fade-up" style="animation-delay:0s" data-category="luxury"
+                    data-location="villahermosa" data-price="180">
+                    <div class="hotel-card-img-wrap">
+                        <img src="./images/marriott_villahermosa.jpg" alt="Villahermosa Marriott Hotel — luxury pool" />
+                    </div>
+                    <div class="hotel-card-body">
+                        <h3 class="hotel-card-name">Villahermosa Marriott Hotel</h3>
+                        <p class="hotel-card-desc">Iconic 5-star landmark in the Tabasco 2000 zone. Stunning pool,
+                            modern business facilities, and world-class dining — steps from the main commercial centers.
+                        </p>
+                        <div class="hotel-card-amenities">
+                            <span class="amenity-tag">🏊 Pool</span>
+                            <span class="amenity-tag">🍽️ Restaurant</span>
+                            <span class="amenity-tag">💆 Spa</span>
+                            <span class="amenity-tag">📶 WiFi</span>
+                            <span class="amenity-tag">🅿️ Parking</span>
+                        </div>
+                    </div>
+                    <div class="hotel-card-footer">
+                        <div class="hotel-price">
+                            <span class="hotel-price-label">From</span>
+                            <div class="hotel-price-value">$180 <span>/ night</span></div>
+                        </div>
+                        <a href="https://drive.google.com/drive/u/0/folders/1BNmL1a17lVYnx_tYbN2hPQaVFwhekAva" target="_blank" rel="noopener" class="book-btn" id="book-1">Book Now</a>
+                    </div>
+                </article>
+
+                <!-- CARD 2 -->
+                <article class="hotel-card fade-up" style="animation-delay:0.08s" data-category="luxury"
+                    data-location="villahermosa" data-price="220">
+                    <div class="hotel-card-img-wrap">
+                        <img src="./images/hyatt_regency_villahermosa.jpg" alt="Hyatt Regency Villahermosa exterior" />
+                    </div>
+                    <div class="hotel-card-body">
+                        <h3 class="hotel-card-name">Hyatt Regency Villahermosa</h3>
+                        <p class="hotel-card-desc">Modern luxury in the heart of Tabasco's capital. The Hyatt Regency
+                            offers spacious rooms, rooftop pool, business lounge, and prime access to the MAYTA Cultural
+                            Museum.</p>
+                        <div class="hotel-card-amenities">
+                            <span class="amenity-tag">🏊 Rooftop Pool</span>
+                            <span class="amenity-tag">🍸 Bar</span>
+                            <span class="amenity-tag">💼 Business Center</span>
+                            <span class="amenity-tag">📶 WiFi</span>
+                        </div>
+                    </div>
+                    <div class="hotel-card-footer">
+                        <div class="hotel-price">
+                            <span class="hotel-price-label">From</span>
+                            <div class="hotel-price-value">$220 <span>/ night</span></div>
+                        </div>
+                        <a href="https://www.booking.com/searchresults.html?ss=Hyatt+Regency+Villahermosa+Tabasco+Mexico&lang=en-us&dest_type=city"
+                            target="_blank" rel="noopener" class="book-btn" id="book-2">Book Now</a>
+                    </div>
+                </article>
+
+
+                <!-- CARD 4 -->
+                <article class="hotel-card fade-up" style="animation-delay:0.24s" data-category="midrange"
+                    data-location="villahermosa" data-price="95">
+                    <div class="hotel-card-img-wrap">
+                        <img src="./images/hotel_olmeca_plaza.jpg" alt="Hotel Olmeca Plaza Villahermosa" />
+                    </div>
+                    <div class="hotel-card-body">
+                        <h3 class="hotel-card-name">Hotel Olmeca Plaza</h3>
+                        <p class="hotel-card-desc">A beloved Villahermosa classic, perfectly located in the Tabasco 2000
+                            zone. Clean, comfortable rooms with excellent local cuisine restaurant and reliable service.
+                        </p>
+                        <div class="hotel-card-amenities">
+                            <span class="amenity-tag">🏊 Pool</span>
+                            <span class="amenity-tag">🍽️ Restaurant</span>
+                            <span class="amenity-tag">📶 WiFi</span>
+                            <span class="amenity-tag">🅿️ Parking</span>
+                        </div>
+                    </div>
+                    <div class="hotel-card-footer">
+                        <div class="hotel-price">
+                            <span class="hotel-price-label">From</span>
+                            <div class="hotel-price-value">$95 <span>/ night</span></div>
+                        </div>
+                        <a href="https://www.booking.com/searchresults.html?ss=Hotel+Olmeca+Plaza+Villahermosa+Tabasco+Mexico&lang=en-us&dest_type=city"
+                            target="_blank" rel="noopener" class="book-btn" id="book-4">Book Now</a>
+                    </div>
+                </article>
+
+                <!-- CARD 5 -->
+                <article class="hotel-card fade-up" style="animation-delay:0.32s" data-category="midrange"
+                    data-location="paraiso" data-price="105">
+                    <div class="hotel-card-img-wrap">
+                        <img src="./images/hampton_inn_paraiso.jpg" alt="Hampton Inn Paraiso Tabasco" />
+                    </div>
+                    <div class="hotel-card-body">
+                        <h3 class="hotel-card-name">Hampton Inn & Suites Paraíso</h3>
+                        <p class="hotel-card-desc">Top-rated modern hotel ideal for visitors to Puerto Ceiba and Dos
+                            Bocas. Includes free hot breakfast, a fitness center, outdoor pool, and exceptional business
+                            facilities.</p>
+                        <div class="hotel-card-amenities">
+                            <span class="amenity-tag">🏊 Pool</span>
+                            <span class="amenity-tag">🍳 Free Breakfast</span>
+                            <span class="amenity-tag">💼 Business Center</span>
+                            <span class="amenity-tag">📶 WiFi</span>
+                        </div>
+                    </div>
+                    <div class="hotel-card-footer">
+                        <div class="hotel-price">
+                            <span class="hotel-price-label">From</span>
+                            <div class="hotel-price-value">$105 <span>/ night</span></div>
+                        </div>
+                        <a href="https://www.booking.com/searchresults.html?ss=Hampton+Inn+Paraiso+Tabasco+Mexico&lang=en-us&dest_type=city"
+                            target="_blank" rel="noopener" class="book-btn" id="book-5">Book Now</a>
+                    </div>
+                </article>
+
+                <!-- CARD 6 -->
+                <article class="hotel-card fade-up" style="animation-delay:0.4s" data-category="midrange"
+                    data-location="paraiso" data-price="90">
+                    <div class="hotel-card-img-wrap">
+                        <img src="./images/holiday_inn_express_paraiso.jpg" alt="Holiday Inn Express Paraiso Tabasco" />
+                    </div>
+                    <div class="hotel-card-body">
+                        <h3 class="hotel-card-name">Holiday Inn Express Paraíso</h3>
+                        <p class="hotel-card-desc">A highly popular choice offering consistent quality, comfortable
+                            rooms, and a great location near the port. Enjoy their signature free breakfast bar before
+                            heading out to the coast.</p>
+                        <div class="hotel-card-amenities">
+                            <span class="amenity-tag">🍳 Free Breakfast</span>
+                            <span class="amenity-tag">💪 Gym</span>
+                            <span class="amenity-tag">🅿️ Free Parking</span>
+                            <span class="amenity-tag">📶 WiFi</span>
+                        </div>
+                    </div>
+                    <div class="hotel-card-footer">
+                        <div class="hotel-price">
+                            <span class="hotel-price-label">From</span>
+                            <div class="hotel-price-value">$90 <span>/ night</span></div>
+                        </div>
+                        <a href="https://www.booking.com/searchresults.html?ss=Holiday+Inn+Express+Paraiso+Tabasco+Mexico&lang=en-us&dest_type=city"
+                            target="_blank" rel="noopener" class="book-btn" id="book-6">Book Now</a>
+                    </div>
+                </article>
+
+
+
+                <!-- CARD 8 - Budget -->
+                <article class="hotel-card fade-up" style="animation-delay:0.56s" data-category="budget"
+                    data-location="cardenas" data-price="45">
+                    <div class="hotel-card-img-wrap">
+                        <img src="./images/hotel_madan_cardenas.jpg" alt="Hotel Madan Cárdenas Tabasco" />
+                    </div>
+                    <div class="hotel-card-body">
+                        <h3 class="hotel-card-name">Hotel Madan Cárdenas</h3>
+                        <p class="hotel-card-desc">Highly rated as one of the best budget-friendly stays in Cárdenas.
+                            Very clean rooms, excellent service, and an on-site restaurant right in the heart of the
+                            city.</p>
+                        <div class="hotel-card-amenities">
+                            <span class="amenity-tag">🍽️ Restaurant</span>
+                            <span class="amenity-tag">🧹 Daily Housekeeping</span>
+                            <span class="amenity-tag">🐾 Pet Friendly</span>
+                            <span class="amenity-tag">📶 WiFi</span>
+                        </div>
+                    </div>
+                    <div class="hotel-card-footer">
+                        <div class="hotel-price">
+                            <span class="hotel-price-label">From</span>
+                            <div class="hotel-price-value">$45 <span>/ night</span></div>
+                        </div>
+                        <a href="https://www.booking.com/searchresults.html?ss=Hotel+Madan+Cardenas+Tabasco+Mexico&lang=en-us&dest_type=city"
+                            target="_blank" rel="noopener" class="book-btn" id="book-8">Book Now</a>
+                    </div>
+                </article>
+
+
+
+                <!-- CARD 10 - Budget Centla -->
+                <article class="hotel-card fade-up" style="animation-delay:0.72s" data-category="budget"
+                    data-location="centla" data-price="40">
+                    <div class="hotel-card-img-wrap">
+                        <img src="./images/hotel_peninsula_frontera.jpg"
+                            alt="Hotel Peninsula Frontera Centla Tabasco" />
+                    </div>
+                    <div class="hotel-card-body">
+                        <h3 class="hotel-card-name">Hotel Península Frontera</h3>
+                        <p class="hotel-card-desc">A reliable and welcoming stay in the port city of Frontera. The
+                            perfect launching pad for river boat tours to the Pantanos de Centla Biosphere Reserve.</p>
+                        <div class="hotel-card-amenities">
+                            <span class="amenity-tag">📺 Cable TV</span>
+                            <span class="amenity-tag">🍽️ 24h Restaurant</span>
+                            <span class="amenity-tag">🐾 Pet Friendly</span>
+                            <span class="amenity-tag">🅿️ Free Parking</span>
+                        </div>
+                    </div>
+                    <div class="hotel-card-footer">
+                        <div class="hotel-price">
+                            <span class="hotel-price-label">From</span>
+                            <div class="hotel-price-value">$40 <span>/ night</span></div>
+                        </div>
+                        <a href="https://www.booking.com/searchresults.html?ss=Hotel+Peninsula+Frontera+Tabasco+Mexico&lang=en-us&dest_type=city"
+                            target="_blank" rel="noopener" class="book-btn" id="book-10">Book Now</a>
+                    </div>
+                </article>
+
+
+
+                <!-- CARD 12 - Budget Paraiso -->
+                <article class="hotel-card fade-up" style="animation-delay:0.88s" data-category="budget"
+                    data-location="paraiso" data-price="60">
+                    <div class="hotel-card-img-wrap">
+                        <img src="./images/hotel_arena_de_mar_paraiso.jpg" alt="Hotel Arena de Mar Paraíso Tabasco" />
+                    </div>
+                    <div class="hotel-card-body">
+                        <h3 class="hotel-card-name">Hotel Arena de Mar</h3>
+                        <p class="hotel-card-desc">A comfortable, practical stay in Paraíso offering a great location
+                            near the beautiful Gulf Coast beaches. Enjoy a relaxing environment with spa services and
+                            clean rooms.</p>
+                        <div class="hotel-card-amenities">
+                            <span class="amenity-tag">💆 Spa Services</span>
+                            <span class="amenity-tag">🏖️ Near Beaches</span>
+                            <span class="amenity-tag">❄️ A/C Rooms</span>
+                            <span class="amenity-tag">🅿️ Free Parking</span>
+                        </div>
+                    </div>
+                    <div class="hotel-card-footer">
+                        <div class="hotel-price">
+                            <span class="hotel-price-label">From</span>
+                            <div class="hotel-price-value">$60 <span>/ night</span></div>
+                        </div>
+                        <a href="https://www.booking.com/searchresults.html?ss=Hotel+Arena+de+Mar+Paraiso+Tabasco+Mexico&lang=en-us&dest_type=city"
+                            target="_blank" rel="noopener" class="book-btn" id="book-12">Book Now</a>
+                    </div>
+                </article>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TRAVEL TIPS ===== -->
+    <section class="tips-section">
+        <div class="container">
+            <span class="section-label" style="color:var(--turquoise-light)">Helpful Advice</span>
+            <h2 class="section-title">Tips for Staying in Tabasco</h2>
+            <p class="section-desc">Make the most of your trip to this hidden gem of Mexico.</p>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🌡️</div>
+                    <div class="tip-title">Beat the Heat</div>
+                    <p class="tip-text">Tabasco is tropical and humid. Book hotels with AC and an indoor pool —
+                        essential comfort during the hot summer months.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">📅</div>
+                    <div class="tip-title">Book Early!</div>
+                    <p class="tip-text">Popular travel seasons bring many visitors. Secure your accommodation
+                        in advance, especially in Villahermosa.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🚌</div>
+                    <div class="tip-title">Location Matters</div>
+                    <p class="tip-text">Stay in Villahermosa for easy access to the whole state. Buses, colectivos, and
+                        taxis connect the capital to most tourist attractions within 2 hours.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">💵</div>
+                    <div class="tip-title">Currency Tips</div>
+                    <p class="tip-text">Most hotels accept credit cards, but budget spots may be cash-only. Exchange USD
+                        at the airport or major banks for the best rates. Keep small pesos handy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p class="footer-copy">© 2026 Tabasco Tourism. Prices shown are estimates. Always verify directly with the property.</p>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+
+
+
+        // Scroll-triggered fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // Hero parallax on scroll
+        const heroBg = document.getElementById('heroBg');
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            if (scrolled < window.innerHeight) {
+                heroBg.style.transform = `scale(1.05) translateY(${scrolled * 0.3}px)`;
+            }
+        }, { passive: true });
+    </script>
+
+</body>
+
+</html>
