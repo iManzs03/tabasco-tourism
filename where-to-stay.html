@@ -224,45 +224,7 @@
             font-size: 1.1em;
         }
 
-        .hero-stats {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 2rem;
-            background: rgba(15, 31, 23, 0.6);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: var(--radius-lg);
-            padding: 1rem 2.5rem;
-            animation: heroFadeIn 1.4s 0.3s both;
-        }
 
-        .hero-stat {
-            text-align: center;
-            color: var(--white);
-        }
-
-        .hero-stat-num {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--gold-light);
-            display: block;
-        }
-
-        .hero-stat-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .hero-divider {
-            width: 1px;
-            background: rgba(255, 255, 255, 0.2);
-            align-self: stretch;
-        }
 
         /* ===== SECTION WRAPPER ===== */
         .section {
@@ -846,9 +808,7 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            .hero-stats {
-                display: none;
-            }
+
 
             .filters-inner {
                 gap: 0.75rem;
@@ -899,22 +859,7 @@
             </p>
             <a href="#hotels" class="hero-cta">Explore Accommodations</a>
         </div>
-        <div class="hero-stats">
-            <div class="hero-stat">
-                <span class="hero-stat-num">60+</span>
-                <span class="hero-stat-label">Hotels Listed</span>
-            </div>
-            <div class="hero-divider"></div>
-            <div class="hero-stat">
-                <span class="hero-stat-num">17</span>
-                <span class="hero-stat-label">Municipalities</span>
-            </div>
-            <div class="hero-divider"></div>
-            <div class="hero-stat">
-                <span class="hero-stat-num">$25</span>
-                <span class="hero-stat-label">Starting / night</span>
-            </div>
-        </div>
+
     </section>
 
 
