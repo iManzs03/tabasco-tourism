@@ -97,63 +97,6 @@
             border-radius: 4px;
         }
 
-        /* ===== NAVIGATION BAR ===== */
-        .nav-bar {
-            background: rgba(15, 31, 23, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1.1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--gold-light);
-            letter-spacing: 0.02em;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-link {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.8);
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            position: relative;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -6px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gold-light);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after, .nav-link.active::after {
-            width: 100%;
-        }
-
-        .nav-link:hover, .nav-link.active {
-            color: var(--gold-light);
-        }
 
         /* ===== HERO SECTION ===== */
         .hero {
@@ -332,7 +275,7 @@
             background: var(--white);
             border-bottom: 1px solid var(--border);
             position: sticky;
-            top: 61px;
+            top: 0;
             z-index: 100;
             box-shadow: var(--shadow-sm);
             padding: 1.1rem 1.5rem;
@@ -636,13 +579,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .nav-bar {
-                padding: 1rem;
-            }
 
-            .nav-links {
-                gap: 1rem;
-            }
         }
 
         @media (max-width: 480px) {
@@ -659,15 +596,6 @@
 
 <body>
 
-    <!-- ===== NAVIGATION BAR ===== -->
-    <nav class="nav-bar">
-        <div class="nav-logo">Tabasco 2026</div>
-        <div class="nav-links">
-            <a href="how-to-get-there.html" class="nav-link">How to Get There</a>
-            <a href="where-to-stay.html" class="nav-link">Where to Stay</a>
-            <a href="where-to-eat.html" class="nav-link active">Gastronomy</a>
-        </div>
-    </nav>
 
     <!-- ===== HERO ===== -->
     <section class="hero" id="top">
