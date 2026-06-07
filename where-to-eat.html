@@ -591,6 +591,56 @@
                 padding: 1rem;
             }
         }
+
+        /* ===== IMAGE CREDITS ===== */
+        .img-credit {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(15, 31, 23, 0.7);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.65rem;
+            font-weight: 500;
+            padding: 3px 8px;
+            border-radius: 4px;
+            z-index: 2;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            pointer-events: auto;
+            transition: background 0.3s ease;
+        }
+        .img-credit a {
+            color: var(--gold-light);
+            text-decoration: underline;
+            text-underline-offset: 1px;
+        }
+        .img-credit a:hover {
+            color: var(--white);
+        }
+
+        /* ===== HERO CREDITS ===== */
+        .hero-credit {
+            position: absolute;
+            bottom: 12px;
+            right: 20px;
+            background: rgba(15, 31, 23, 0.6);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.7rem;
+            padding: 4px 12px;
+            border-radius: 50px;
+            z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-credit a {
+            color: var(--gold-light);
+            text-decoration: underline;
+        }
+        .hero-credit a:hover {
+            color: var(--white);
+        }
     </style>
 </head>
 
@@ -601,6 +651,7 @@
     <section class="hero" id="top">
         <div class="hero-bg" id="heroBg"></div>
         <div class="hero-overlay"></div>
+        <div class="hero-credit">Fondo: Promoción Turística</div>
         <div class="hero-content">
             <div class="hero-badge">Flavor & Tradition</div>
             <h1 class="hero-title">
@@ -650,6 +701,7 @@
                     <div class="food-card-img-wrap">
                         <span class="food-badge">Dish</span>
                         <img src="./images/where-to-eat/pejelagarto-asado.jpg" alt="Traditional grilled Pejelagarto garfish" />
+                        <span class="img-credit">Foto: Gemini AI</span>
                     </div>
                     <div class="food-card-body">
                         <h3 class="food-card-name">Pejelagarto Asado</h3>
@@ -670,6 +722,7 @@
                     <div class="food-card-img-wrap">
                         <span class="food-badge">Dish</span>
                         <img src="./images/where-to-eat/tamales-chipilin.jpg" alt="Tamales de chipilin with tomato salsa" />
+                        <span class="img-credit">Foto: <a href="https://www.eluniversal.com.mx/menu/de-que-estan-hechos-los-tamales-de-chipilin/" target="_blank" rel="noopener">El Universal</a></span>
                     </div>
                     <div class="food-card-body">
                         <h3 class="food-card-name">Tamales de Chipilín</h3>
@@ -690,6 +743,7 @@
                     <div class="food-card-img-wrap">
                         <span class="food-badge">Dish</span>
                         <img src="./images/where-to-eat/chanchamitos.jpg" alt="Traditional round chanchamitos tamales" />
+                        <span class="img-credit">Foto: <a href="https://es.wikipedia.org/wiki/Chanchamito#/media/Archivo:Chanchamitos_de_Minatitl%C3%A1n_01.jpg" target="_blank" rel="noopener">Wikipedia</a></span>
                     </div>
                     <div class="food-card-body">
                         <h3 class="food-card-name">Chanchamitos</h3>
@@ -710,6 +764,7 @@
                     <div class="food-card-img-wrap">
                         <span class="food-badge">Dish</span>
                         <img src="./images/where-to-eat/puchero-tabasqueno.jpg" alt="Beef stew with tropical vegetables" />
+                        <span class="img-credit">Foto: <a href="https://elgourmet.com/recetas/pucheros-tabasquenos" target="_blank" rel="noopener">El Gourmet</a></span>
                     </div>
                     <div class="food-card-body">
                         <h3 class="food-card-name">Puchero Tabasqueño</h3>
@@ -730,6 +785,7 @@
                     <div class="food-card-img-wrap">
                         <span class="food-badge">Dish</span>
                         <img src="./images/where-to-eat/butifarra-jalpa.jpg" alt="Artisanal butifarra pork sausage" />
+                        <span class="img-credit">Foto: <a href="https://www.mexicodesconocido.com.mx/butifarra-el-embutido-tabasqueno-favorito-del-presidente.html" target="_blank" rel="noopener">MexDesconocido</a></span>
                     </div>
                     <div class="food-card-body">
                         <h3 class="food-card-name">Butifarra de Jalpa</h3>
@@ -750,6 +806,7 @@
                     <div class="food-card-img-wrap">
                         <span class="food-badge">Dish</span>
                         <img src="./images/where-to-eat/piguas.jpg" alt="Giant freshwater prawns cooked with garlic" />
+                        <span class="img-credit">Foto: <a href="https://lossaboresdemexico.com/piguas-en-caldo/" target="_blank" rel="noopener">SaboresdeMéxico</a></span>
                     </div>
                     <div class="food-card-body">
                         <h3 class="food-card-name">Piguas</h3>
@@ -770,6 +827,7 @@
                     <div class="food-card-img-wrap">
                         <span class="food-badge">Drink</span>
                         <img src="./images/where-to-eat/pozol-cacao.jpg" alt="Traditional pozol drink in jicara bowl" />
+                        <span class="img-credit">Foto: <a href="https://elpoderdelconsumidor.org/2020/11/el-poder-de-el-pozol/" target="_blank" rel="noopener">PoderConsumidor</a></span>
                     </div>
                     <div class="food-card-body">
                         <h3 class="food-card-name">Pozol con Cacao</h3>
@@ -790,6 +848,7 @@
                     <div class="food-card-img-wrap">
                         <span class="food-badge">Drink</span>
                         <img src="./images/where-to-eat/chorote.jpg" alt="Rich thick chorote drink" />
+                        <span class="img-credit">Foto: <a href="https://oem.com.mx/elheraldodetabasco/cultura/chorote-la-bebida-ancestral-de-tabasco-19454914" target="_blank" rel="noopener">El Heraldo</a></span>
                     </div>
                     <div class="food-card-body">
                         <h3 class="food-card-name">Chorote</h3>
@@ -810,6 +869,7 @@
                     <div class="food-card-img-wrap">
                         <span class="food-badge">Dessert</span>
                         <img src="./images/where-to-eat/dulce-oreja-mico.jpg" alt="Sweet oreja de mico papaya dessert" />
+                        <span class="img-credit">Foto: <a href="https://www.tripadvisor.com/LocationPhotoDirectLink-g249851-d3903202-i65715113-Restaurant_Maya_Canada-Palenque_Southern_Mexico.html" target="_blank" rel="noopener">TripAdvisor</a></span>
                     </div>
                     <div class="food-card-body">
                         <h3 class="food-card-name">Dulce de Oreja de Mico</h3>

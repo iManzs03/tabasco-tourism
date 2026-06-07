@@ -1,23 +1,68 @@
 # 📁 images/
 
+Este directorio contiene los recursos visuales utilizados en las diferentes secciones del sitio web de Tabasco Tourism. A continuación se detallan los nombres de los archivos, sus enlaces de origen oficiales y sus licencias o atribuciones.
 
 ---
 
-## 🖼️ Imágenes Requeridas
+## 🏨 1. Hospedaje (`where-to-stay/`)
 
-Descarga una imagen para cada lugar y guárdala con el **nombre exacto** (asegúrate de que sean formato `.jpg`):
+Imágenes y recursos utilizados en la sección de Hoteles y Eco-lodges en Tabasco.
 
-| Archivo que debes crear (¡Nombre Exacto!) | Enlace de Origen / Sugerencia de búsqueda | Uso en la web |
+| Archivo | Origen / Enlace de Referencia | Uso / Licencia |
 |---|---|---|
-| **`hero_bg_tabasco.jpg`** | [🔗 Imagen de Wikipedia](https://upload.wikimedia.org/wikipedia/commons/3/3e/Pantanos_de_Centla_10.JPG) o buscar "Pantanos de Centla" | Fondo principal de la página (Where to Stay) |
-| **`hero_bg_get_there.jpg`** | Buscar "Villahermosa Airport VSA" o "Tren Maya Tenosique" | Fondo principal de la página (How to Get There) |
-| **`marriott_villahermosa.jpg`** | [🔗 Galería Marriott](https://www.marriott.com/es/hotels/vsamc-villahermosa-marriott-hotel/photos/) o buscar "Villahermosa Marriott Hotel piscina" | Tarjeta: Villahermosa Marriott Hotel |
-| **`hyatt_regency_villahermosa.jpg`** | [🔗 Galería Central de Reservas](https://www.centraldereservas.com/hoteles/mexico/tabasco/villahermosa/hyatt-regency-villahermosa#y) o buscar "Hyatt Regency Villahermosa exterior" | Tarjeta: Hyatt Regency Villahermosa |
-| **`hotel_olmeca_plaza.jpg`** | [🔗 Galería Booking.com](https://www.booking.com/hotel/mx/olmeca-plaza.es.html?aid=356980&label=gog235jc-10CAsooAFCDG9sbWVjYS1wbGF6YUhSWANooAGIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Avr7gtEGwAIB0gIkMmM1NWQ0YjktM2Y3OS00MTgzLTllNTMtYWIyNDM2ZjJlMWE22AIB4AIB&sid=c10130a0ff4b0c2f706bdf1e1f3dd848&all_sr_blocks=32718316_90391923_2_1_0&checkin=2026-06-03&checkout=2026-06-04&dest_id=-1708147&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=32718316_90391923_2_1_0&hpos=1&matching_block_id=32718316_90391923_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=32718316_90391923_2_1_0__96390&srepoch=1780530691&srpvid=7110a7be34c513cf&type=total&ucfs=1&activeTab=photosGallery) o buscar "Hotel Olmeca Plaza Villahermosa" | Tarjeta: Hotel Olmeca Plaza |
-| **`hampton_inn_paraiso.jpg`** | [🔗 Galería TripAdvisor](https://www.tripadvisor.com.mx/Hotel_Review-g1836971-d8554831-Reviews-Hampton_Inn_Suites_By_Hilton_Paraiso-Paraiso_Central_Mexico_and_Gulf_Coast.html) o buscar "Hampton Inn Paraiso Tabasco" | Tarjeta: Hampton Inn & Suites Paraíso |
-| **`holiday_inn_express_paraiso.jpg`** | [🔗 Galería Hoteles.com](https://www.hoteles.com/ho312407/holiday-inn-express-paraiso-dos-bocas-an-ihg-hotel-paraiso-mexico/?discovery-landing-offers-overlay=discovery-landing-offers-overlay&locale=es_MX&siteid=300400003) o buscar "Holiday Inn Express Paraiso Tabasco" | Tarjeta: Holiday Inn Express Paraíso |
-| **`hotel_madan_cardenas.jpg`** | [🔗 Galería TripAdvisor](https://www.tripadvisor.com.mx/Hotel_Review-g3181061-d3479182-Reviews-Hotel_Madan_Cardenas-Cardenas_Central_Mexico_and_Gulf_Coast.html#/media/3479182/?type=ALL_INCLUDING_RESTRICTED&albumid=101&category=101) o buscar "Hotel Madan Cardenas Tabasco" | Tarjeta: Hotel Madan Cárdenas |
-| **`hotel_peninsula_frontera.jpg`** | [🔗 Sitio web Hotel Península](http://www.hotelpeninsula.com.mx/#seccion_confort) o buscar "Hotel Peninsula Frontera Tabasco" | Tarjeta: Hotel Península Frontera |
-| **`hotel_arena_de_mar_paraiso.jpg`** | [🔗 Galería Expedia](https://www.expedia.mx/Villahermosa-Hoteles-Hotel-Arena-De-Mar.h33773818.Informacion-Hotel?discovery-landing-offers-overlay=discovery-landing-offers-overlay) o buscar "Hotel Arena de Mar Paraiso Tabasco" | Tarjeta: Hotel Arena de Mar |
+| **`hero_bg_tabasco.jpg`** | [🔗 Imagen de Wikipedia](https://upload.wikimedia.org/wikipedia/commons/3/3e/Pantanos_de_Centla_10.JPG) | Fondo principal (Pantanos de Centla) |
+| **`marriott_villahermosa.jpg`** | [🔗 Galería Marriott](https://www.marriott.com/es/hotels/vsamc-villahermosa-marriott-hotel/photos/) | Tarjeta: Villahermosa Marriott Hotel |
+| **`hyatt_regency_villahermosa.jpg`** | [🔗 Galería Central de Reservas](https://www.centraldereservas.com/hoteles/mexico/tabasco/villahermosa/hyatt-regency-villahermosa#y) | Tarjeta: Hyatt Regency Villahermosa |
+| **`hotel_olmeca_plaza.jpg`** | [🔗 Galería Booking.com](https://www.booking.com/hotel/mx/olmeca-plaza.es.html) | Tarjeta: Hotel Olmeca Plaza |
+| **`hampton_inn_paraiso.jpg`** | [🔗 Galería TripAdvisor](https://www.tripadvisor.com.mx/Hotel_Review-g1836971-d8554831-Reviews-Hampton_Inn_Suites_By_Hilton_Paraiso-Paraiso_Central_Mexico_and_Gulf_Coast.html) | Tarjeta: Hampton Inn & Suites Paraíso |
+| **`holiday_inn_express_paraiso.jpg`** | [🔗 Galería Hoteles.com](https://www.hoteles.com/ho312407/holiday-inn-express-paraiso-dos-bocas-an-ihg-hotel-paraiso-mexico/) | Tarjeta: Holiday Inn Express Paraíso |
+| **`hotel_madan_cardenas.jpg`** | [🔗 Galería TripAdvisor](https://www.tripadvisor.com.mx/Hotel_Review-g3181061-d3479182-Reviews-Hotel_Madan_Cardenas-Cardenas_Central_Mexico_and_Gulf_Coast.html) | Tarjeta: Hotel Madan Cárdenas |
+| **`hotel_peninsula_frontera.jpg`** | [🔗 Sitio web Hotel Península](http://www.hotelpeninsula.com.mx/#seccion_confort) | Tarjeta: Hotel Península Frontera |
+| **`hotel_arena_de_mar_paraiso.jpg`** | [🔗 Galería Expedia](https://www.expedia.mx/Villahermosa-Hoteles-Hotel-Arena-De-Mar.h33773818.Informacion-Hotel) | Tarjeta: Hotel Arena de Mar |
 
---
+---
+
+## ✈️ 2. Transporte (`how-to-get-there/`)
+
+Imágenes utilizadas en la guía de tránsito y movilidad para la Copa del Mundo 2026.
+
+### 🎠 Carrusel de Bienvenida (Hero Section)
+
+| Archivo | Origen / Enlace de Referencia | Descripción del Recurso |
+|---|---|---|
+| **`1.jpg`** | [🔗 AD Magazine](https://www.admagazine.com/articulos/malecon-de-villahermosa-es-reconocido-en-los-paris-design-awards-2024) | Vista del Malecón de Villahermosa |
+| **`2.jpg`** | [🔗 Entorno Turístico](https://www.entornoturistico.com/que-hacer-en-villahermosa-7-lugares-que-debes-visitar-en-la-capital-de-tabasco/) | Imagen promocional de Villahermosa |
+| **`3.jpg`** | [🔗 Psicología y Mente](https://psicologiaymente.com/directorio/mx/rankings/mejores-psicologos-depresion-villahermosa) | Vista panorámica de la ciudad |
+| **`4.jpg`** | [🔗 Wikipedia](https://es.wikipedia.org/wiki/Archivo:Tomas_a%C3%A9reas_de_Villahermosa,_Tabasco_7.jpg) | Toma aérea de Villahermosa |
+| **`5.jpg`** | [🔗 Gobierno de Tabasco](https://tabasco.gob.mx/noticias/con-nueva-imagen-malecones-de-villahermosa-se-promueve-atraccion-turistica-y-fortalece) | Nuevos malecones turísticos |
+| **`6.jpg`** | [🔗 Expedia](https://www.expedia.com/es/Villahermosa.dx6347927?gallery-dialog=gallery-open) | Vista de la Catedral y alrededores |
+
+### 🚌 Medios de Transporte
+
+| Archivo | Origen / Enlace de Referencia | Atribución / Licencia |
+|---|---|---|
+| **`airport-vsa.jpg`** | [🔗 Unsplash](https://unsplash.com/photos/1529074963764-98f45c47344b) | Licencia Libre de Unsplash |
+| **`ado-platino.jpg`** | [🔗 El Financiero](https://www.elfinanciero.com.mx/transporte-y-movilidad/2025/07/09/con-una-inversion-de-2000-mdp-mobility-ado-revoluciona-el-transporte-foraneo-ejecutivo-y-de-lujo/) | Mobility ADO de lujo |
+| **`highway-mexico.jpg`** | [🔗 Unsplash](https://unsplash.com/photos/1584438784894-089d6a62b8fa) | Licencia Libre de Unsplash |
+| **`car-rental.jpg`** | [🔗 Unsplash](https://unsplash.com/photos/1584438784894-089d6a62b8fa) | Licencia Libre de Unsplash |
+| **`colectivos.jpg`** | [🔗 El Heraldo de Tabasco](https://oem.com.mx/elheraldodetabasco/local/por-que-no-hay-transporte-de-la-ruta-mendez-en-villahermosa-13115586) | Artículo de prensa de colectivos locales |
+| **`taxis.jpg`** | [🔗 El Heraldo de Tabasco](https://oem.com.mx/elheraldodetabasco/local/taxis-de-villahermosa-no-pueden-prestar-servicios-colectivos-movilidad-20379412) | Artículo de prensa de taxis locales |
+
+---
+
+## 🌶️ 3. Gastronomía (`where-to-eat/`)
+
+Recursos gastronómicos de platillos tradicionales, bebidas ancestrales y postres tabasqueños.
+
+| Archivo | Origen / Enlace de Referencia | Atribución / Licencia |
+|---|---|---|
+| **`hero-bg.jpg`** | Recurso de promoción de turismo e identidad (Local) | Promoción Turística |
+| **`pejelagarto-asado.jpg`** | Generador de imágenes de Inteligencia Artificial (Gemini) | Recurso generado por IA |
+| **`tamales-chipilin.jpg`** | [🔗 El Universal](https://www.eluniversal.com.mx/menu/de-que-estan-hechos-los-tamales-de-chipilin/) | Especial gastronómico de El Universal |
+| **`chanchamitos.jpg`** | [🔗 Wikipedia](https://es.wikipedia.org/wiki/Chanchamito#/media/Archivo:Chanchamitos_de_Minatitl%C3%A1n_01.jpg) | Reseña e imagen histórica del tamal |
+| **`puchero-tabasqueno.jpg`** | [🔗 El Gourmet](https://elgourmet.com/recetas/pucheros-tabasquenos) | Receta tradicional en El Gourmet |
+| **`butifarra-jalpa.jpg`** | [🔗 México Desconocido](https://www.mexicodesconocido.com.mx/butifarra-el-embutido-tabasqueno-favorito-del-presidente.html) | Nota culinaria de Jalpa de Méndez |
+| **`piguas.jpg`** | [🔗 Los Sabores de México](https://lossaboresdemexico.com/piguas-en-caldo/) | Reportaje de mariscos de río |
+| **`pozol-cacao.jpg`** | [🔗 El Poder del Consumidor](https://elpoderdelconsumidor.org/2020/11/el-poder-de-el-pozol/) | Análisis y fotos del pozol ancestral |
+| **`chorote.jpg`** | [🔗 El Heraldo de Tabasco](https://oem.com.mx/elheraldodetabasco/cultura/chorote-la-bebida-ancestral-de-tabasco-19454914) | Reseña cultural de bebida tradicional |
+| **`dulce-oreja-mico.jpg`** | [🔗 TripAdvisor](https://www.tripadvisor.com/LocationPhotoDirectLink-g249851-d3903202-i65715113-Restaurant_Maya_Canada-Palenque_Southern_Mexico.html) | Galería de fotos del Restaurant Maya Cañada |

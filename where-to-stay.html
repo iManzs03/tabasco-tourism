@@ -836,6 +836,56 @@
                 padding: 1rem;
             }
         }
+
+        /* ===== IMAGE CREDITS ===== */
+        .img-credit {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(15, 31, 23, 0.7);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.65rem;
+            font-weight: 500;
+            padding: 3px 8px;
+            border-radius: 4px;
+            z-index: 2;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            pointer-events: auto;
+            transition: background 0.3s ease;
+        }
+        .img-credit a {
+            color: var(--gold-light);
+            text-decoration: underline;
+            text-underline-offset: 1px;
+        }
+        .img-credit a:hover {
+            color: var(--white);
+        }
+
+        /* ===== HERO CREDITS ===== */
+        .hero-credit {
+            position: absolute;
+            bottom: 12px;
+            right: 20px;
+            background: rgba(15, 31, 23, 0.6);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.7rem;
+            padding: 4px 12px;
+            border-radius: 50px;
+            z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-credit a {
+            color: var(--gold-light);
+            text-decoration: underline;
+        }
+        .hero-credit a:hover {
+            color: var(--white);
+        }
     </style>
 </head>
 
@@ -847,6 +897,7 @@
     <section class="hero" id="top">
         <div class="hero-bg" id="heroBg"></div>
         <div class="hero-overlay"></div>
+        <div class="hero-credit">Foto: <a href="https://upload.wikimedia.org/wikipedia/commons/3/3e/Pantanos_de_Centla_10.JPG" target="_blank" rel="noopener">Wikipedia</a></div>
         <div class="hero-content">
             <div class="hero-badge">Tabasco, Mexico</div>
             <h1 class="hero-title">
@@ -880,7 +931,10 @@
                 <article class="hotel-card fade-up" style="animation-delay:0s" data-category="luxury"
                     data-location="villahermosa" data-price="180">
                     <div class="hotel-card-img-wrap">
-                        <img src="./images/where-to-stay/marriott_villahermosa.jpg" alt="Villahermosa Marriott Hotel — luxury pool" />
+                        <a href="https://www.marriott.com/es/hotels/vsamc-villahermosa-marriott-hotel/photos/" target="_blank" rel="noopener">
+                            <img src="./images/where-to-stay/marriott_villahermosa.jpg" alt="Villahermosa Marriott Hotel — luxury pool" />
+                        </a>
+                        <span class="img-credit">Foto: <a href="https://www.marriott.com/es/hotels/vsamc-villahermosa-marriott-hotel/photos/" target="_blank" rel="noopener">Marriott</a></span>
                     </div>
                     <div class="hotel-card-body">
                         <h3 class="hotel-card-name">Villahermosa Marriott Hotel</h3>
@@ -900,7 +954,7 @@
                             <span class="hotel-price-label">From</span>
                             <div class="hotel-price-value">$180 <span>/ night</span></div>
                         </div>
-                        <a href="https://drive.google.com/drive/u/0/folders/1BNmL1a17lVYnx_tYbN2hPQaVFwhekAva" target="_blank" rel="noopener" class="book-btn" id="book-1">Book Now</a>
+                        <a href="https://www.marriott.com/es/hotels/vsamc-villahermosa-marriott-hotel/photos/" target="_blank" rel="noopener" class="book-btn" id="book-1">Book Now</a>
                     </div>
                 </article>
 
@@ -908,7 +962,10 @@
                 <article class="hotel-card fade-up" style="animation-delay:0.08s" data-category="luxury"
                     data-location="villahermosa" data-price="220">
                     <div class="hotel-card-img-wrap">
-                        <img src="./images/where-to-stay/hyatt_regency_villahermosa.jpg" alt="Hyatt Regency Villahermosa exterior" />
+                        <a href="https://www.centraldereservas.com/hoteles/mexico/tabasco/villahermosa/hyatt-regency-villahermosa#y" target="_blank" rel="noopener">
+                            <img src="./images/where-to-stay/hyatt_regency_villahermosa.jpg" alt="Hyatt Regency Villahermosa exterior" />
+                        </a>
+                        <span class="img-credit">Foto: <a href="https://www.centraldereservas.com/hoteles/mexico/tabasco/villahermosa/hyatt-regency-villahermosa#y" target="_blank" rel="noopener">CentralReservas</a></span>
                     </div>
                     <div class="hotel-card-body">
                         <h3 class="hotel-card-name">Hyatt Regency Villahermosa</h3>
@@ -927,7 +984,7 @@
                             <span class="hotel-price-label">From</span>
                             <div class="hotel-price-value">$220 <span>/ night</span></div>
                         </div>
-                        <a href="https://www.booking.com/searchresults.html?ss=Hyatt+Regency+Villahermosa+Tabasco+Mexico&lang=en-us&dest_type=city"
+                        <a href="https://www.centraldereservas.com/hoteles/mexico/tabasco/villahermosa/hyatt-regency-villahermosa#y"
                             target="_blank" rel="noopener" class="book-btn" id="book-2">Book Now</a>
                     </div>
                 </article>
@@ -937,7 +994,10 @@
                 <article class="hotel-card fade-up" style="animation-delay:0.24s" data-category="midrange"
                     data-location="villahermosa" data-price="95">
                     <div class="hotel-card-img-wrap">
-                        <img src="./images/where-to-stay/hotel_olmeca_plaza.jpg" alt="Hotel Olmeca Plaza Villahermosa" />
+                        <a href="https://www.booking.com/hotel/mx/olmeca-plaza.es.html" target="_blank" rel="noopener">
+                            <img src="./images/where-to-stay/hotel_olmeca_plaza.jpg" alt="Hotel Olmeca Plaza Villahermosa" />
+                        </a>
+                        <span class="img-credit">Foto: <a href="https://www.booking.com/hotel/mx/olmeca-plaza.es.html" target="_blank" rel="noopener">Booking</a></span>
                     </div>
                     <div class="hotel-card-body">
                         <h3 class="hotel-card-name">Hotel Olmeca Plaza</h3>
@@ -956,7 +1016,7 @@
                             <span class="hotel-price-label">From</span>
                             <div class="hotel-price-value">$95 <span>/ night</span></div>
                         </div>
-                        <a href="https://www.booking.com/searchresults.html?ss=Hotel+Olmeca+Plaza+Villahermosa+Tabasco+Mexico&lang=en-us&dest_type=city"
+                        <a href="https://www.booking.com/hotel/mx/olmeca-plaza.es.html"
                             target="_blank" rel="noopener" class="book-btn" id="book-4">Book Now</a>
                     </div>
                 </article>
@@ -965,7 +1025,10 @@
                 <article class="hotel-card fade-up" style="animation-delay:0.32s" data-category="midrange"
                     data-location="paraiso" data-price="105">
                     <div class="hotel-card-img-wrap">
-                        <img src="./images/where-to-stay/hampton_inn_paraiso.jpg" alt="Hampton Inn Paraiso Tabasco" />
+                        <a href="https://www.tripadvisor.com.mx/Hotel_Review-g1836971-d8554831-Reviews-Hampton_Inn_Suites_By_Hilton_Paraiso-Paraiso_Central_Mexico_and_Gulf_Coast.html" target="_blank" rel="noopener">
+                            <img src="./images/where-to-stay/hampton_inn_paraiso.jpg" alt="Hampton Inn Paraiso Tabasco" />
+                        </a>
+                        <span class="img-credit">Foto: <a href="https://www.tripadvisor.com.mx/Hotel_Review-g1836971-d8554831-Reviews-Hampton_Inn_Suites_By_Hilton_Paraiso-Paraiso_Central_Mexico_and_Gulf_Coast.html" target="_blank" rel="noopener">TripAdvisor</a></span>
                     </div>
                     <div class="hotel-card-body">
                         <h3 class="hotel-card-name">Hampton Inn & Suites Paraíso</h3>
@@ -984,7 +1047,7 @@
                             <span class="hotel-price-label">From</span>
                             <div class="hotel-price-value">$105 <span>/ night</span></div>
                         </div>
-                        <a href="https://www.booking.com/searchresults.html?ss=Hampton+Inn+Paraiso+Tabasco+Mexico&lang=en-us&dest_type=city"
+                        <a href="https://www.tripadvisor.com.mx/Hotel_Review-g1836971-d8554831-Reviews-Hampton_Inn_Suites_By_Hilton_Paraiso-Paraiso_Central_Mexico_and_Gulf_Coast.html"
                             target="_blank" rel="noopener" class="book-btn" id="book-5">Book Now</a>
                     </div>
                 </article>
@@ -993,7 +1056,10 @@
                 <article class="hotel-card fade-up" style="animation-delay:0.4s" data-category="midrange"
                     data-location="paraiso" data-price="90">
                     <div class="hotel-card-img-wrap">
-                        <img src="./images/where-to-stay/holiday_inn_express_paraiso.jpg" alt="Holiday Inn Express Paraiso Tabasco" />
+                        <a href="https://www.hoteles.com/ho312407/holiday-inn-express-paraiso-dos-bocas-an-ihg-hotel-paraiso-mexico/" target="_blank" rel="noopener">
+                            <img src="./images/where-to-stay/holiday_inn_express_paraiso.jpg" alt="Holiday Inn Express Paraiso Tabasco" />
+                        </a>
+                        <span class="img-credit">Foto: <a href="https://www.hoteles.com/ho312407/holiday-inn-express-paraiso-dos-bocas-an-ihg-hotel-paraiso-mexico/" target="_blank" rel="noopener">Hoteles.com</a></span>
                     </div>
                     <div class="hotel-card-body">
                         <h3 class="hotel-card-name">Holiday Inn Express Paraíso</h3>
@@ -1012,7 +1078,7 @@
                             <span class="hotel-price-label">From</span>
                             <div class="hotel-price-value">$90 <span>/ night</span></div>
                         </div>
-                        <a href="https://www.booking.com/searchresults.html?ss=Holiday+Inn+Express+Paraiso+Tabasco+Mexico&lang=en-us&dest_type=city"
+                        <a href="https://www.hoteles.com/ho312407/holiday-inn-express-paraiso-dos-bocas-an-ihg-hotel-paraiso-mexico/"
                             target="_blank" rel="noopener" class="book-btn" id="book-6">Book Now</a>
                     </div>
                 </article>
@@ -1023,7 +1089,10 @@
                 <article class="hotel-card fade-up" style="animation-delay:0.56s" data-category="budget"
                     data-location="cardenas" data-price="45">
                     <div class="hotel-card-img-wrap">
-                        <img src="./images/where-to-stay/hotel_madan_cardenas.jpg" alt="Hotel Madan Cárdenas Tabasco" />
+                        <a href="https://www.tripadvisor.com.mx/Hotel_Review-g3181061-d3479182-Reviews-Hotel_Madan_Cardenas-Cardenas_Central_Mexico_and_Gulf_Coast.html" target="_blank" rel="noopener">
+                            <img src="./images/where-to-stay/hotel_madan_cardenas.jpg" alt="Hotel Madan Cárdenas Tabasco" />
+                        </a>
+                        <span class="img-credit">Foto: <a href="https://www.tripadvisor.com.mx/Hotel_Review-g3181061-d3479182-Reviews-Hotel_Madan_Cardenas-Cardenas_Central_Mexico_and_Gulf_Coast.html" target="_blank" rel="noopener">TripAdvisor</a></span>
                     </div>
                     <div class="hotel-card-body">
                         <h3 class="hotel-card-name">Hotel Madan Cárdenas</h3>
@@ -1042,7 +1111,7 @@
                             <span class="hotel-price-label">From</span>
                             <div class="hotel-price-value">$45 <span>/ night</span></div>
                         </div>
-                        <a href="https://www.booking.com/searchresults.html?ss=Hotel+Madan+Cardenas+Tabasco+Mexico&lang=en-us&dest_type=city"
+                        <a href="https://www.tripadvisor.com.mx/Hotel_Review-g3181061-d3479182-Reviews-Hotel_Madan_Cardenas-Cardenas_Central_Mexico_and_Gulf_Coast.html"
                             target="_blank" rel="noopener" class="book-btn" id="book-8">Book Now</a>
                     </div>
                 </article>
@@ -1053,8 +1122,11 @@
                 <article class="hotel-card fade-up" style="animation-delay:0.72s" data-category="budget"
                     data-location="centla" data-price="40">
                     <div class="hotel-card-img-wrap">
-                        <img src="./images/where-to-stay/hotel_peninsula_frontera.jpg"
-                            alt="Hotel Peninsula Frontera Centla Tabasco" />
+                        <a href="http://www.hotelpeninsula.com.mx/#seccion_confort" target="_blank" rel="noopener">
+                            <img src="./images/where-to-stay/hotel_peninsula_frontera.jpg"
+                                alt="Hotel Peninsula Frontera Centla Tabasco" />
+                        </a>
+                        <span class="img-credit">Foto: <a href="http://www.hotelpeninsula.com.mx/#seccion_confort" target="_blank" rel="noopener">HotelPenínsula</a></span>
                     </div>
                     <div class="hotel-card-body">
                         <h3 class="hotel-card-name">Hotel Península Frontera</h3>
@@ -1072,7 +1144,7 @@
                             <span class="hotel-price-label">From</span>
                             <div class="hotel-price-value">$40 <span>/ night</span></div>
                         </div>
-                        <a href="https://www.booking.com/searchresults.html?ss=Hotel+Peninsula+Frontera+Tabasco+Mexico&lang=en-us&dest_type=city"
+                        <a href="http://www.hotelpeninsula.com.mx/#seccion_confort"
                             target="_blank" rel="noopener" class="book-btn" id="book-10">Book Now</a>
                     </div>
                 </article>
@@ -1083,7 +1155,10 @@
                 <article class="hotel-card fade-up" style="animation-delay:0.88s" data-category="budget"
                     data-location="paraiso" data-price="60">
                     <div class="hotel-card-img-wrap">
-                        <img src="./images/where-to-stay/hotel_arena_de_mar_paraiso.jpg" alt="Hotel Arena de Mar Paraíso Tabasco" />
+                        <a href="https://www.expedia.mx/Villahermosa-Hoteles-Hotel-Arena-De-Mar.h33773818.Informacion-Hotel" target="_blank" rel="noopener">
+                            <img src="./images/where-to-stay/hotel_arena_de_mar_paraiso.jpg" alt="Hotel Arena de Mar Paraíso Tabasco" />
+                        </a>
+                        <span class="img-credit">Foto: <a href="https://www.expedia.mx/Villahermosa-Hoteles-Hotel-Arena-De-Mar.h33773818.Informacion-Hotel" target="_blank" rel="noopener">Expedia</a></span>
                     </div>
                     <div class="hotel-card-body">
                         <h3 class="hotel-card-name">Hotel Arena de Mar</h3>
@@ -1102,7 +1177,7 @@
                             <span class="hotel-price-label">From</span>
                             <div class="hotel-price-value">$60 <span>/ night</span></div>
                         </div>
-                        <a href="https://www.booking.com/searchresults.html?ss=Hotel+Arena+de+Mar+Paraiso+Tabasco+Mexico&lang=en-us&dest_type=city"
+                        <a href="https://www.expedia.mx/Villahermosa-Hoteles-Hotel-Arena-De-Mar.h33773818.Informacion-Hotel"
                             target="_blank" rel="noopener" class="book-btn" id="book-12">Book Now</a>
                     </div>
                 </article>
