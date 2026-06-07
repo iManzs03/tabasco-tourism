@@ -66,3 +66,8 @@ Recursos gastronómicos de platillos tradicionales, bebidas ancestrales y postre
 | **`pozol-cacao.jpg`** | [🔗 El Poder del Consumidor](https://elpoderdelconsumidor.org/2020/11/el-poder-de-el-pozol/) | Análisis y fotos del pozol ancestral |
 | **`chorote.jpg`** | [🔗 El Heraldo de Tabasco](https://oem.com.mx/elheraldodetabasco/cultura/chorote-la-bebida-ancestral-de-tabasco-19454914) | Reseña cultural de bebida tradicional |
 | **`dulce-oreja-mico.jpg`** | [🔗 TripAdvisor](https://www.tripadvisor.com/LocationPhotoDirectLink-g249851-d3903202-i65715113-Restaurant_Maya_Canada-Palenque_Southern_Mexico.html) | Galería de fotos del Restaurant Maya Cañada |
+| **`[Externo] mercado-pino-suarez`** | [🔗 Unsplash](https://unsplash.com/photos/food-stall-during-daytime-Hl37M2X4dFI) | Foto de puesto de comida callejera (Jakub Kapusnak) |
+| **`[Externo] el-teapaneco`** | [🔗 Unsplash](https://unsplash.com/photos/brown-wooden-table-with-chairs-and-white-ceramic-plates-on-top-I54aC_fHscw) | Foto de interior de cocina tradicional (Fabrizio Chiagano) |
+| **`[Externo] txori-cocina-libre`** | [🔗 Unsplash](https://unsplash.com/photos/white-ceramic-plate-with-food-and-fork-and-knife-on-brown-wooden-table-JayWennington) | Plato gourmet con flores y salsas (Jay Wennington) |
+| **`[Externo] asador-castellano`** | [🔗 Unsplash](https://unsplash.com/photos/cooked-steak-on-brown-wooden-cutting-board-sliced-into-pieces-ChadMontano) | Ribeye cortado sobre tabla de madera (Chad Montano) |
+
