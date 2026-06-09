@@ -66,8 +66,24 @@ Recursos gastronómicos de platillos tradicionales, bebidas ancestrales y postre
 | **`pozol-cacao.jpg`** | [🔗 El Poder del Consumidor](https://elpoderdelconsumidor.org/2020/11/el-poder-de-el-pozol/) | Análisis y fotos del pozol ancestral |
 | **`chorote.jpg`** | [🔗 El Heraldo de Tabasco](https://oem.com.mx/elheraldodetabasco/cultura/chorote-la-bebida-ancestral-de-tabasco-19454914) | Reseña cultural de bebida tradicional |
 | **`dulce-oreja-mico.jpg`** | [🔗 TripAdvisor](https://www.tripadvisor.com/LocationPhotoDirectLink-g249851-d3903202-i65715113-Restaurant_Maya_Canada-Palenque_Southern_Mexico.html) | Galería de fotos del Restaurant Maya Cañada |
-| **`[Externo] mercado-pino-suarez`** | [🔗 Unsplash](https://unsplash.com/photos/food-stall-during-daytime-Hl37M2X4dFI) | Foto de puesto de comida callejera (Jakub Kapusnak) |
-| **`[Externo] el-teapaneco`** | [🔗 Unsplash](https://unsplash.com/photos/brown-wooden-table-with-chairs-and-white-ceramic-plates-on-top-I54aC_fHscw) | Foto de interior de cocina tradicional (Fabrizio Chiagano) |
-| **`[Externo] txori-cocina-libre`** | [🔗 Unsplash](https://unsplash.com/photos/white-ceramic-plate-with-food-and-fork-and-knife-on-brown-wooden-table-JayWennington) | Plato gourmet con flores y salsas (Jay Wennington) |
-| **`[Externo] asador-castellano`** | [🔗 Unsplash](https://unsplash.com/photos/cooked-steak-on-brown-wooden-cutting-board-sliced-into-pieces-ChadMontano) | Ribeye cortado sobre tabla de madera (Chad Montano) |
 
+| **`mercado-pino-suarez.jpg`** | [🔗 Gobierno de Tabasco](https://tabasco.gob.mx/noticias/inaugura-adan-augusto-nuevo-mercado-pino-suarez) | Restaurante: Mercado Pino Suárez |
+| **`el-teapaneco.jpg`** | [🔗 Google Maps](https://maps.app.goo.gl/LNcWAKFGvJhpFaa97) | Restaurante: El Teapaneco |
+| **`asador-castellano.jpg`** | [🔗 Bodas.com.mx](https://cdn0.bodas.com.mx/vendor/9277/3_2/960/png/vista-del-restaurante.jpeg) | Restaurante: Asador Castellano |
+| **`el-rincon-tabasqueno.jpg`** | [🔗 Facebook](https://www.facebook.com/photo?fbid=1631758715338609&locale=es_LA) | Restaurante: El Rincón Tabasqueño |
+
+---
+
+## 🏕️ 4. Experiencias (`what-to-do/`)
+
+Imágenes utilizadas para la sección de experiencias y atracciones en Tabasco.
+
+| Archivo | Origen / Enlace de Referencia | Uso / Licencia |
+|---|---|---|
+| **`what-to-do-hero.jpg`** | [🔗 Wikipedia](https://es.wikipedia.org/wiki/Tapijulapa#/media/Archivo:Tapijulapa._Parque.jpg) | Imagen de fondo del Hero (Tapijulapa) |
+| **`kayak-through-the-mangroves.jpg`** | [🔗 Ruta Tabasco](https://www.rutatabasco.com/experiencia/kayak-al-amanecer-en-pantanos-de-centla-) | Kayak Through the Mangroves |
+| **`swim-beneath-waterfalls.jpg`** | [🔗 Cascadas de Agua Azul](https://www.cascadasdeaguazul.com/ruta-1-villahermosa-tabasco) | Swim Beneath Waterfalls |
+| **`explore-ancient-ruins.jpg`** | [🔗 Wikipedia](https://en.wikipedia.org/wiki/Comalcalco_(archaeological_site)) | Explore Ancient Ruins |
+| **`discover-hidden-caves.jpg`** | [🔗 Tripadvisor](https://www.tripadvisor.com.mx/Attraction_Review-g1575503-d7277041-Reviews-Grutas_de_Cocona-Tabasco_Central_Mexico_and_Gulf_Coast.html#/media/7277041/?type=ALL_INCLUDING_RESTRICTED&albumid=-160&category=-160) | Discover Hidden Caves |
+| **`cruise-the-usumacinta-river.jpg`** | [🔗 Facebook Guia Tren Maya](https://www.facebook.com/photo?fbid=1131281849020262) | Cruise the Usumacinta River |
+| **`taste-traditional-flavors.jpg`** | [🔗 Visit Mexico](https://visitmexico.com/es/destino/18391/eshacienda-cacaotera-jesus-mariaenhacienda-cacaotera-jesus-maria) | Taste Traditional Flavors |

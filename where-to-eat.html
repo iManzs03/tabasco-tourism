@@ -641,6 +641,180 @@
         .hero-credit a:hover {
             color: var(--white);
         }
+
+        /* ===== MAP SECTION ===== */
+        .map-section {
+            background: var(--surface);
+            padding: 6rem 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .map-container-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin-top: 3rem;
+        }
+
+        .map-sidebar {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: var(--jungle-pale);
+            border-right: 1px solid var(--border);
+            max-height: 550px;
+            overflow-y: auto;
+        }
+
+        .map-sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--jungle);
+            margin-bottom: 0.5rem;
+        }
+
+        .map-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            padding: 1.2rem;
+            background: var(--white);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            text-align: left;
+            width: 100%;
+        }
+
+        .map-item:hover {
+            border-color: var(--jungle-light);
+            transform: translateX(4px);
+        }
+
+        .map-item.active {
+            border-color: var(--gold);
+            background: var(--gold-pale);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .map-item-name {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--jungle);
+        }
+
+        .map-item-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .map-item-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 0.2rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .map-item-address {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--turquoise);
+            font-weight: 600;
+        }
+
+        .map-view-wrapper {
+            position: relative;
+            height: 550px;
+            background: #e5e3df;
+        }
+
+        .map-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .map-loading-spinner {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(248, 250, 249, 0.8);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+            z-index: 5;
+        }
+
+        .map-loading-spinner.show {
+            opacity: 1;
+        }
+
+        .map-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border);
+            border-top-color: var(--jungle);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* ===== MAP BUTTON IN CARD ===== */
+        .map-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--jungle);
+            border: 1.5px solid var(--jungle);
+            background: transparent;
+            transition: all 0.25s ease;
+            margin-top: 0.8rem;
+            align-self: flex-start;
+            text-decoration: none;
+        }
+
+        .map-btn:hover {
+            background: var(--jungle);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        @media (max-width: 992px) {
+            .map-container-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .map-sidebar {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                max-height: 300px;
+            }
+            .map-view-wrapper {
+                height: 400px;
+            }
+        }
     </style>
 </head>
 
@@ -906,18 +1080,19 @@
                 <!-- CARD 1: Mercado Pino Suárez -->
                 <article class="food-card fade-up" style="animation-delay: 0s;">
                     <div class="food-card-img-wrap">
-                        <span class="food-badge">Mercado / Típico</span>
-                        <img src="https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=800&auto=format&fit=crop&q=80" alt="Mercado Pino Suárez food stalls" />
-                        <span class="img-credit">Foto: <a href="https://unsplash.com/photos/food-stall-during-daytime-Hl37M2X4dFI" target="_blank" rel="noopener">Unsplash</a></span>
+                        <span class="food-badge">Traditional Market</span>
+                        <img src="./images/where-to-eat/mercado-pino-suarez.jpg" alt="Mercado Pino Suárez food stalls" />
+                        <span class="img-credit">Foto: Local</span>
                     </div>
                     <div class="food-card-body">
                         <h3 class="food-card-name">Mercado José María Pino Suárez</h3>
-                        <p class="food-card-desc">El corazón culinario de Villahermosa. El lugar más auténtico para degustar tamales de chipilín, pejelagarto asado o chirmol, y refrescarse con un pozol bien frío servido en jícara.</p>
+                        <p class="food-card-desc">The culinary heart of Villahermosa. The most authentic place to taste chipilín tamales, pejelagarto asado, or chirmol, and cool off with a cold pozol served in a traditional jícara.</p>
                         <div class="food-card-tags">
-                            <span class="tag">🍢 Antojitos</span>
-                            <span class="tag">🧉 Pozol Frío</span>
-                            <span class="tag">🐟 Pejelagarto</span>
+                            <span class="tag">🍢 Local Snacks</span>
+                            <span class="tag">🧉 Cold Pozol</span>
+                            <span class="tag">🐟 Grilled Garfish</span>
                         </div>
+                        <button class="map-btn animate-target" data-target="mercado">📍 View on Map</button>
                     </div>
                     <div class="food-card-footer">
                         <div class="food-origin">📍 Av. Pino Suárez, Centro</div>
@@ -927,66 +1102,139 @@
                 <!-- CARD 2: El Teapaneco -->
                 <article class="food-card fade-up" style="animation-delay: 0.08s;">
                     <div class="food-card-img-wrap">
-                        <span class="food-badge">Restaurante Típico</span>
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80" alt="El Teapaneco restaurant interior" />
-                        <span class="img-credit">Foto: <a href="https://unsplash.com/photos/brown-wooden-table-with-chairs-and-white-ceramic-plates-on-top-I54aC_fHscw" target="_blank" rel="noopener">Unsplash</a></span>
+                        <span class="food-badge">Traditional Restaurant</span>
+                        <img src="./images/where-to-eat/el-teapaneco.jpg" alt="El Teapaneco restaurant interior" />
+                        <span class="img-credit">Foto: Local</span>
                     </div>
                     <div class="food-card-body">
                         <h3 class="food-card-name">El Teapaneco</h3>
-                        <p class="food-card-desc">Un referente tradicional para desayunar o comer en Villahermosa. Famoso por su cocina tabasqueña auténtica, tamales, carne de Chinameca y tortillas recién hechas en un ambiente rústico.</p>
+                        <p class="food-card-desc">A traditional benchmark for breakfast or lunch in Villahermosa. Famous for its authentic Tabasco cuisine, tamales, Chinameca beef, and fresh handmade tortillas in a rustic setting.</p>
                         <div class="food-card-tags">
-                            <span class="tag">🍳 Desayunos</span>
-                            <span class="tag">🏡 Tradicional</span>
+                            <span class="tag">🍳 Breakfasts</span>
+                            <span class="tag">🏡 Traditional</span>
                             <span class="tag">🥩 Chinameca</span>
                         </div>
+                        <button class="map-btn animate-target" data-target="teapaneco">📍 View on Map</button>
                     </div>
                     <div class="food-card-footer">
                         <div class="food-origin">📍 Villahermosa</div>
                     </div>
                 </article>
 
-                <!-- CARD 3: Txori Cocina Libre -->
+                <!-- CARD 3: Asador Castellano -->
                 <article class="food-card fade-up" style="animation-delay: 0.16s;">
                     <div class="food-card-img-wrap">
-                        <span class="food-badge">Gourmet / Fusión</span>
-                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&auto=format&fit=crop&q=80" alt="Txori Cocina Libre fine dining" />
-                        <span class="img-credit">Foto: <a href="https://unsplash.com/photos/white-ceramic-plate-with-food-and-fork-and-knife-on-brown-wooden-table-JayWennington" target="_blank" rel="noopener">Unsplash</a></span>
-                    </div>
-                    <div class="food-card-body">
-                        <h3 class="food-card-name">Txori Cocina Libre</h3>
-                        <p class="food-card-desc">Cocina de autor del chef Ernesto Aguilera en Tabasco 2000. Una propuesta vanguardista de fine dining que combina ingredientes locales tabasqueños con técnicas contemporáneas y de fusión.</p>
-                        <div class="food-card-tags">
-                            <span class="tag">✨ Alta Cocina</span>
-                            <span class="tag">🥬 Ingredientes Locales</span>
-                            <span class="tag">🍷 Maridaje</span>
-                        </div>
-                    </div>
-                    <div class="food-card-footer">
-                        <div class="food-origin">📍 Tabasco 2000, Villahermosa</div>
-                    </div>
-                </article>
-
-                <!-- CARD 4: Asador Castellano -->
-                <article class="food-card fade-up" style="animation-delay: 0.24s;">
-                    <div class="food-card-img-wrap">
-                        <span class="food-badge">Cortes / Asador</span>
-                        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=800&auto=format&fit=crop&q=80" alt="Asador Castellano premium steaks" />
-                        <span class="img-credit">Foto: <a href="https://unsplash.com/photos/cooked-steak-on-brown-wooden-cutting-board-sliced-into-pieces-ChadMontano" target="_blank" rel="noopener">Unsplash</a></span>
+                        <span class="food-badge">Steakhouse / Grill</span>
+                        <img src="./images/where-to-eat/asador-castellano.jpg" alt="Asador Castellano premium steaks" />
+                        <span class="img-credit">Foto: Local</span>
                     </div>
                     <div class="food-card-body">
                         <h3 class="food-card-name">Asador Castellano</h3>
-                        <p class="food-card-desc">Ubicado en la zona de La Choca, es la joya gastronómica para los amantes de los cortes de carne premium. Excelente ambiente para cenas formales, vinos y servicio de primer nivel.</p>
+                        <p class="food-card-desc">Located in the La Choca area, it is a gastronomic gem for lovers of premium cuts of meat. Excellent atmosphere for formal dinners, wines, and top-tier service.</p>
                         <div class="food-card-tags">
-                            <span class="tag">🔥 Brasas</span>
-                            <span class="tag">🥩 Cortes Selectos</span>
-                            <span class="tag">🍷 Cava de Vinos</span>
+                            <span class="tag">🔥 Embers</span>
+                            <span class="tag">🥩 Select Cuts</span>
+                            <span class="tag">🍷 Wine Cellar</span>
                         </div>
+                        <button class="map-btn animate-target" data-target="castellano">📍 View on Map</button>
                     </div>
                     <div class="food-card-footer">
                         <div class="food-origin">📍 La Choca, Villahermosa</div>
                     </div>
                 </article>
 
+                <!-- CARD 4: El Rincón Tabasqueño -->
+                <article class="food-card fade-up" style="animation-delay: 0.24s;">
+                    <div class="food-card-img-wrap">
+                        <span class="food-badge">Family Restaurant</span>
+                        <img src="./images/where-to-eat/el-rincon-tabasqueno.jpg" alt="El Rincón Tabasqueño interior" />
+                        <span class="img-credit">Foto: Local</span>
+                    </div>
+                    <div class="food-card-body">
+                        <h3 class="food-card-name">El Rincón Tabasqueño</h3>
+                        <p class="food-card-desc">A classic and cozy family diner in the heart of Villahermosa. Celebrated for its home-style regional Tabasco cooking, traditional chirmol, pejelagarto asado, and warm hospitality.</p>
+                        <div class="food-card-tags">
+                            <span class="tag">🏡 Cozy / Home-style</span>
+                            <span class="tag">🍲 Chirmol</span>
+                            <span class="tag">🐟 Pejelagarto</span>
+                        </div>
+                        <button class="map-btn animate-target" data-target="rincon">📍 View on Map</button>
+                    </div>
+                    <div class="food-card-footer">
+                        <div class="food-origin">📍 Av. 27 de Febrero, Centro</div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAP SECTION ===== -->
+    <section class="map-section" id="mapSection">
+        <div class="container">
+            <span class="section-label">Culinary Locations</span>
+            <h2 class="section-title">Interactive Culinary Map</h2>
+            <p class="section-desc">
+                Find your way to these culinary landmarks. Click on any restaurant in the sidebar list or click "View on Map" above to view its location.
+            </p>
+
+            <div class="map-container-wrapper">
+                <!-- Sidebar List of Restaurants -->
+                <div class="map-sidebar">
+                    <h3 class="map-sidebar-title">Restaurants</h3>
+                    
+                    <button class="map-item active" data-map-target="mercado" aria-label="View Mercado José María Pino Suárez on map">
+                        <span class="map-item-name">Mercado José María Pino Suárez</span>
+                        <p class="map-item-desc">The largest traditional market in Villahermosa.</p>
+                        <div class="map-item-meta">
+                            <span class="map-item-address">📍 Downtown</span>
+                            <span>Traditional Market</span>
+                        </div>
+                    </button>
+
+                    <button class="map-item" data-map-target="teapaneco" aria-label="View El Teapaneco on map">
+                        <span class="map-item-name">El Teapaneco</span>
+                        <p class="map-item-desc">Traditional Tabasco cuisine and typical breakfasts.</p>
+                        <div class="map-item-meta">
+                            <span class="map-item-address">📍 Ruiz Cortines</span>
+                            <span>Traditional</span>
+                        </div>
+                    </button>
+
+                    <button class="map-item" data-map-target="castellano" aria-label="View Asador Castellano on map">
+                        <span class="map-item-name">Asador Castellano</span>
+                        <p class="map-item-desc">Premium meat cuts in a great atmosphere.</p>
+                        <div class="map-item-meta">
+                            <span class="map-item-address">📍 La Choca</span>
+                            <span>Steakhouse / Grill</span>
+                        </div>
+                    </button>
+
+                    <button class="map-item" data-map-target="rincon" aria-label="View El Rincón Tabasqueño on map">
+                        <span class="map-item-name">El Rincón Tabasqueño</span>
+                        <p class="map-item-desc">Cozy diner in Villahermosa serving home-style chirmol and stews.</p>
+                        <div class="map-item-meta">
+                            <span class="map-item-address">📍 Downtown</span>
+                            <span>Family Restaurant</span>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Google Maps Frame -->
+                <div class="map-view-wrapper">
+                    <div class="map-loading-spinner" id="mapSpinner">
+                        <div class="map-spinner"></div>
+                    </div>
+                    <iframe 
+                        id="mapIframe"
+                        class="map-iframe"
+                        src="https://maps.google.com/maps?q=Mercado%20Pino%20Suarez,%20Villahermosa,%20Tabasco&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        allowfullscreen=""
+                        loading="lazy"
+                        title="Google Maps Location View"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -1081,6 +1329,70 @@
                 heroBg.style.transform = `scale(1.05) translateY(${scrolled * 0.3}px)`;
             }
         }, { passive: true });
+
+        // Map Interactivity Logic
+        const mapUrls = {
+            mercado: "https://maps.google.com/maps?q=Mercado%20Pino%20Suarez,%20Villahermosa,%20Tabasco&t=&z=16&ie=UTF8&iwloc=&output=embed",
+            teapaneco: "https://maps.google.com/maps?q=El%20Teapaneco,%20Villahermosa,%20Tabasco&t=&z=16&ie=UTF8&iwloc=&output=embed",
+            castellano: "https://maps.google.com/maps?q=Asador%20Castellano,%20Villahermosa,%20Tabasco&t=&z=16&ie=UTF8&iwloc=&output=embed",
+            rincon: "https://maps.google.com/maps?q=El%20Rincon%20Tabasqueno,%20Villahermosa,%20Tabasco&t=&z=16&ie=UTF8&iwloc=&output=embed"
+        };
+
+        const mapItems = document.querySelectorAll('.map-item');
+        const mapIframe = document.getElementById('mapIframe');
+        const mapSpinner = document.getElementById('mapSpinner');
+        const mapSection = document.getElementById('mapSection');
+
+        // Function to load map for a specific target
+        function loadMap(target) {
+            if (!mapUrls[target]) return;
+            
+            // Show spinner
+            mapSpinner.classList.add('show');
+            mapIframe.style.opacity = '0.5';
+            
+            // Update active state in sidebar
+            mapItems.forEach(item => {
+                if (item.getAttribute('data-map-target') === target) {
+                    item.classList.add('active');
+                    // Scroll sidebar to show selected item if needed
+                    item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Update iframe src
+            mapIframe.src = mapUrls[target];
+        }
+
+        // Hide spinner when iframe finishes loading
+        mapIframe.addEventListener('load', () => {
+            mapSpinner.classList.remove('show');
+            mapIframe.style.opacity = '1';
+        });
+
+        // Sidebar click handler
+        mapItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const target = item.getAttribute('data-map-target');
+                loadMap(target);
+            });
+        });
+
+        // "Ver en Mapa" button click handler from card
+        document.querySelectorAll('.map-btn.animate-target').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = btn.getAttribute('data-target');
+                
+                // Select and load map
+                loadMap(target);
+                
+                // Smooth scroll to map section
+                mapSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
     </script>
 
 </body>

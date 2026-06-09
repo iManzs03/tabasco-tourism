@@ -1,0 +1,736 @@
+<link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0
+    }
+
+    html,
+    body {
+        width: 100%;
+        background: #faf7f0;
+        font-family: 'DM Sans', sans-serif;
+        color: #1f3d2b;
+        overflow-x: hidden;
+    }
+
+    .whatdo-page {
+        background: #faf7f0;
+        width: 100%
+    }
+
+    /* HERO */
+    .whatdo-hero {
+        position: relative;
+        min-height: 520px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+    }
+
+    .whatdo-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("./images/what-to-do/what-to-do-hero.jpg");
+        background-size: cover;
+        background-position: center;
+        animation: slowZoom 18s ease-in-out infinite alternate;
+    }
+
+    .whatdo-hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(rgba(0, 0, 0, .42), rgba(0, 0, 0, .62));
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        padding: 40px;
+    }
+
+    .hero-content h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(56px, 9vw, 105px);
+        line-height: 1;
+        margin-bottom: 18px;
+    }
+
+    .hero-content p {
+        max-width: 760px;
+        margin: auto;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #f4eadc;
+        font-weight: 500;
+    }
+
+    @keyframes slowZoom {
+        from {
+            transform: scale(1)
+        }
+
+        to {
+            transform: scale(1.035)
+        }
+    }
+
+    /* CREDITS */
+    .hero-credit,
+    .image-credit {
+        position: absolute;
+        z-index: 5;
+        background: rgba(0, 0, 0, .70);
+        color: white;
+        border-radius: 2px;
+        font-weight: 700;
+    }
+
+    .hero-credit {
+        right: 18px;
+        bottom: 18px;
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+    .image-credit {
+        right: 10px;
+        bottom: 12px;
+        font-size: 8.5px;
+        padding: 4px 6px;
+        line-height: 1;
+    }
+
+    .hero-credit a,
+    .image-credit a {
+        color: white !important;
+        text-decoration: underline;
+        font-weight: 800;
+    }
+
+    /* GENERAL */
+    .section {
+        padding: 75px 6%;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 34px;
+    }
+
+    .section-title h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(36px, 5vw, 58px);
+        color: #1f3d2b;
+        margin-bottom: 12px;
+    }
+
+    .section-title p {
+        max-width: 780px;
+        margin: auto;
+        color: #5d6c60;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    /* SEPARATORS */
+    .sep-bar {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        margin: 38px 0 4px;
+    }
+
+    .sep-bar-thick {
+        width: 80px;
+        height: 3px;
+        border-radius: 2px;
+        background: linear-gradient(to right, transparent, #c9922a, transparent);
+    }
+
+    .sep-bar-thin {
+        width: 160px;
+        height: .5px;
+        background: linear-gradient(to right, transparent, rgba(201, 146, 42, .4), transparent);
+    }
+
+    .essence-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 24px 0 36px;
+    }
+
+    .essence-dots span {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+    }
+
+    .essence-dots span:nth-child(1),
+    .essence-dots span:nth-child(5) {
+        background: rgba(201, 146, 42, .3);
+    }
+
+    .essence-dots span:nth-child(2),
+    .essence-dots span:nth-child(4) {
+        background: rgba(201, 146, 42, .55);
+    }
+
+    .essence-dots .center {
+        width: 7px;
+        height: 7px;
+        background: #c9922a;
+    }
+
+    /* FIND YOUR PERFECT ADVENTURE */
+    .adventure-grid {
+        max-width: 1120px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+
+    .adventure-card {
+        background: white;
+        border-radius: 24px;
+        padding: 34px 24px;
+        text-align: center;
+        box-shadow: 0 14px 28px rgba(31, 61, 43, .14);
+        transition: .3s ease;
+        min-height: 270px;
+    }
+
+    .adventure-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 24px 42px rgba(31, 61, 43, .22);
+    }
+
+    .icon-circle {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin: 0 auto 18px;
+        background: #1f3d2b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #c9922a;
+    }
+
+    .icon-circle svg {
+        width: 34px;
+        height: 34px;
+        stroke: #f0c96a;
+        fill: none;
+        stroke-width: 2;
+    }
+
+    .adventure-card h3 {
+        font-size: 21px;
+        color: #1f3d2b;
+        margin-bottom: 12px;
+    }
+
+    .adventure-card p {
+        color: #5d6c60;
+        font-size: 15.5px;
+        line-height: 1.55;
+    }
+
+    /* POPULAR ACTIVITIES */
+    .activities-section {
+        background: #e5f2ea;
+        padding: 75px 6%;
+    }
+
+    .activities-box {
+        max-width: 1180px;
+        margin: auto;
+        background: #faf7f0;
+        border-radius: 24px;
+        padding: 40px 28px;
+        box-shadow: 0 14px 28px rgba(31, 61, 43, .12);
+    }
+
+    .activities-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+    }
+
+    .activity {
+        text-align: center;
+        padding: 12px 16px;
+        border-right: 1px solid rgba(31, 61, 43, .20);
+    }
+
+    .activity:last-child {
+        border-right: none
+    }
+
+    .activity svg {
+        width: 48px;
+        height: 48px;
+        stroke: #1f3d2b;
+        fill: none;
+        stroke-width: 2;
+        margin-bottom: 12px;
+    }
+
+    .activity h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #1f3d2b;
+    }
+
+    .activity p {
+        font-size: 13.5px;
+        color: #5d6c60;
+        line-height: 1.4;
+    }
+
+    /* TOP EXPERIENCES */
+    .experiences-grid {
+        max-width: 1180px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .exp-card {
+        position: relative;
+        min-height: 260px;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 14px 28px rgba(31, 61, 43, .18);
+        transition: .35s ease;
+    }
+
+    .exp-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 24px 42px rgba(31, 61, 43, .26);
+    }
+
+    .exp-card img {
+        width: 100%;
+        height: 100%;
+        min-height: 260px;
+        object-fit: cover;
+        display: block;
+        transition: .45s ease;
+    }
+
+    .exp-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .exp-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, .82), rgba(0, 0, 0, .18));
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 24px;
+    }
+
+    .exp-overlay h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 27px;
+        line-height: 1.05;
+        margin-bottom: 8px;
+    }
+
+    .exp-overlay p {
+        font-size: 15px;
+        line-height: 1.45;
+        color: #f4eadc;
+    }
+
+    .exp-location {
+        margin-top: 10px;
+        font-size: 13px;
+        color: #f0c96a;
+        font-weight: 800;
+        letter-spacing: .04em;
+    }
+
+    /* CTA */
+    .cta-section {
+        background:
+            radial-gradient(circle at center, rgba(240, 201, 106, .20) 0%, rgba(240, 201, 106, 0) 45%),
+            linear-gradient(135deg, #052918 0%, #0b5a38 50%, #173f2b 100%);
+        padding: 70px 6%;
+    }
+
+    .cta-box {
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 45px 28px;
+    }
+
+    .cta-eyebrow {
+        color: #f0c96a;
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: .25em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+    }
+
+    .cta-title {
+        color: white;
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(40px, 6vw, 58px);
+        line-height: 1.15;
+        max-width: 900px;
+        margin: 0 auto 24px;
+    }
+
+    .cta-text {
+        color: rgba(255, 255, 255, .76);
+        font-size: clamp(16px, 1.8vw, 22px);
+        line-height: 1.8;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    /* FOOTER */
+    .whatdo-footer {
+        width: 100%;
+        background: #1f3d2b;
+        color: #faf7f0;
+        padding: 45px 20px;
+        text-align: center;
+        border-top: 4px solid #d9a441;
+    }
+
+    .whatdo-footer p {
+        color: #d9d2c5;
+        font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:1000px) {
+
+        .adventure-grid,
+        .experiences-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .activities-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .activity {
+            border-right: none;
+        }
+
+        .whatdo-hero {
+            min-height: 460px
+        }
+    }
+
+    @media(max-width:650px) {
+
+        .section,
+        .activities-section {
+            padding: 55px 6%;
+        }
+
+        .adventure-grid,
+        .experiences-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .activities-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .hero-content h1 {
+            font-size: 54px;
+        }
+
+        .hero-content p {
+            font-size: 17px;
+        }
+    }
+</style>
+
+<div class="whatdo-page">
+
+    <section class="whatdo-hero">
+        <div class="hero-content">
+            <h1>What to Do</h1>
+            <p>
+                Countless adventures, unique cultures, and unforgettable moments await you in Tabasco.
+            </p>
+        </div>
+
+        <div class="hero-credit">
+            <span>Photo:</span>
+            <a href="https://es.wikipedia.org/wiki/Tapijulapa" target="_blank" rel="noopener">Wikipedia</a>
+        </div>
+    </section>
+
+    <div class="sep-bar">
+        <div class="sep-bar-thin"></div>
+        <div class="sep-bar-thick"></div>
+        <div class="sep-bar-thin"></div>
+    </div>
+
+    <section class="section">
+        <div class="section-title">
+            <h2>Find Your Perfect Adventure</h2>
+            <p>
+                No matter your travel style, Tabasco has experiences that will inspire you.
+            </p>
+
+            <div class="essence-dots">
+                <span></span><span></span><span class="center"></span><span></span><span></span>
+            </div>
+        </div>
+
+        <div class="adventure-grid">
+            <div class="adventure-card">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 17c7-12 13-8 16-13-1 8-5 15-16 13z" />
+                        <path d="M4 17c4-1 8-4 11-8" />
+                    </svg>
+                </div>
+                <h3>Nature Lovers</h3>
+                <p>Explore rivers, wetlands, jungles, and natural landscapes full of life.</p>
+            </div>
+
+            <div class="adventure-card">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 20h18L12 4 3 20z" />
+                        <path d="M12 4l3 8-3-2-3 2 3-8z" />
+                    </svg>
+                </div>
+                <h3>Adventure Seekers</h3>
+                <p>Enjoy exciting outdoor activities surrounded by breathtaking scenery.</p>
+            </div>
+
+            <div class="adventure-card">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 10h16" />
+                        <path d="M6 10v9" />
+                        <path d="M10 10v9" />
+                        <path d="M14 10v9" />
+                        <path d="M18 10v9" />
+                        <path d="M3 19h18" />
+                        <path d="M12 4l8 6H4l8-6z" />
+                    </svg>
+                </div>
+                <h3>History Enthusiasts</h3>
+                <p>Discover ancient civilizations, museums, traditions, and cultural heritage.</p>
+            </div>
+
+            <div class="adventure-card">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7 3v18" />
+                        <path d="M4 3v6a3 3 0 0 0 6 0V3" />
+                        <path d="M17 3v18" />
+                        <path d="M14 3h3a3 3 0 0 1 0 6h-3" />
+                    </svg>
+                </div>
+                <h3>Food Lovers</h3>
+                <p>Savor traditional flavors and discover the richness of Tabasco’s cuisine.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="activities-section">
+        <div class="activities-box">
+            <div class="section-title">
+                <h2>Popular Activities in Tabasco</h2>
+                <p>Exciting activities that let you experience the best of Tabasco.</p>
+            </div>
+
+            <div class="activities-grid">
+                <div class="activity">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 17h18" />
+                        <path d="M5 17l2-7h10l2 7" />
+                        <path d="M8 10V7h8v3" />
+                    </svg>
+                    <h3>Boat Tours</h3>
+                    <p>Navigate rivers and wetlands.</p>
+                </div>
+
+                <div class="activity">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M13 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
+                        <path d="M10 21l2-6-2-4-3 3" />
+                        <path d="M12 11l4 2 2 4" />
+                    </svg>
+                    <h3>Hiking</h3>
+                    <p>Explore trails and nature.</p>
+                </div>
+
+                <div class="activity">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7 4v16" />
+                        <path d="M12 4v16" />
+                        <path d="M17 4v16" />
+                        <path d="M4 20h16" />
+                    </svg>
+                    <h3>Waterfall Swimming</h3>
+                    <p>Swim in natural pools.</p>
+                </div>
+
+                <div class="activity">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 20c2-8 6-12 9-12s7 4 9 12H3z" />
+                        <path d="M9 20c1-4 2-6 3-6s2 2 3 6" />
+                    </svg>
+                    <h3>Cave Exploration</h3>
+                    <p>Discover caves and formations.</p>
+                </div>
+
+                <div class="activity">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 16c5-9 12-9 16-3-4 1-7 4-10 5-3 1-5 0-6-2z" />
+                    </svg>
+                    <h3>Wildlife Watching</h3>
+                    <p>Observe birds and wildlife.</p>
+                </div>
+
+                <div class="activity">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 20h16" />
+                        <path d="M6 20V9l6-5 6 5v11" />
+                        <path d="M10 20v-6h4v6" />
+                    </svg>
+                    <h3>Cultural Experiences</h3>
+                    <p>Learn about traditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <h2>Top Experiences in Tabasco</h2>
+            <p>Don’t miss these unforgettable experiences and destinations.</p>
+        </div>
+
+        <div class="experiences-grid">
+
+            <div class="exp-card">
+                <img src="./images/what-to-do/kayak-through-the-mangroves.jpg" alt="Kayak Through the Mangroves">
+                <div class="exp-overlay">
+                    <h3>Kayak Through the Mangroves</h3>
+                    <p>Paddle through peaceful waterways surrounded by wildlife and lush nature.</p>
+                    <div class="exp-location">Pantanos de Centla</div>
+                </div>
+                <div class="image-credit">Photo: <a
+                        href="https://www.rutatabasco.com/experiencia/kayak-al-amanecer-en-pantanos-de-centla-"
+                        target="_blank" rel="noopener">Ruta Tabasco</a>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <img src="./images/what-to-do/swim-beneath-waterfalls.jpg" alt="Swim Beneath Waterfalls">
+                <div class="exp-overlay">
+                    <h3>Swim Beneath Waterfalls</h3>
+                    <p>Cool off in crystal-clear waters and enjoy breathtaking natural scenery.</p>
+                    <div class="exp-location">Cascadas de Reforma / Villa Luz</div>
+                </div>
+                <div class="image-credit">Photo: <a href="https://www.cascadasdeaguazul.com/ruta-1-villahermosa-tabasco"
+                        target="_blank" rel="noopener">Cascadas de Agua Azul</a>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <img src="./images/what-to-do/explore-ancient-ruins.jpg" alt="Explore Ancient Ruins">
+                <div class="exp-overlay">
+                    <h3>Explore Ancient Ruins</h3>
+                    <p>Walk through the legacy of the Olmec and Maya civilizations.</p>
+                    <div class="exp-location">Comalcalco Archaeological Site</div>
+                </div>
+                <div class="image-credit">Photo: <a
+                        href="https://en.wikipedia.org/wiki/Comalcalco_(archaeological_site)" target="_blank"
+                        rel="noopener">Wikipedia</a>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <img src="./images/what-to-do/discover-hidden-caves.jpg" alt="Discover Hidden Caves">
+                <div class="exp-overlay">
+                    <h3>Discover Hidden Caves</h3>
+                    <p>Venture into fascinating underground worlds full of natural wonders.</p>
+                    <div class="exp-location">Grutas de Coconá</div>
+                </div>
+                <div class="image-credit">Photo: <a
+                        href="https://www.tripadvisor.com.mx/Attraction_Review-g1575503-d7277041-Reviews-Grutas_de_Cocona-Tabasco_Central_Mexico_and_Gulf_Coast.html#/media/7277041/?type=ALL_INCLUDING_RESTRICTED&albumid=-160&category=-160"
+                        target="_blank" rel="noopener">Tripadvisor</a>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <img src="./images/what-to-do/cruise-the-usumacinta-river.jpg" alt="Cruise the Usumacinta River">
+                <div class="exp-overlay">
+                    <h3>Cruise the Usumacinta River</h3>
+                    <p>Navigate one of Mexico’s most impressive rivers and spectacular canyons.</p>
+                    <div class="exp-location">Boca del Cerro / Usumacinta Canyon</div>
+                </div>
+                <div class="image-credit">Photo: <a href="https://www.facebook.com/photo?fbid=1131281849020262"
+                        target="_blank" rel="noopener">Facebook Guia Tren Maya</a>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <img src="./images/what-to-do/taste-traditional-flavors.jpg" alt="Taste Traditional Flavors">
+                <div class="exp-overlay">
+                    <h3>Taste Traditional Flavors</h3>
+                    <p>Savor authentic cuisine from local markets, restaurants, and cacao farms.</p>
+                    <div class="exp-location">Villahermosa / Cacao Farms</div>
+                </div>
+                <div class="image-credit">Photo: <a
+                        href="https://visitmexico.com/es/destino/18391/eshacienda-cacaotera-jesus-mariaenhacienda-cacaotera-jesus-maria"
+                        target="_blank" rel="noopener">Visit Mexico</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-box">
+            <div class="cta-eyebrow">Ready to explore?</div>
+            <h2 class="cta-title">Your next adventure starts in Tabasco.</h2>
+            <p class="cta-text">
+                From rivers and waterfalls to ancient ruins, caves, and traditional flavors,
+                every experience in Tabasco tells a story worth discovering.
+            </p>
+        </div>
+    </section>
+
+    <footer class="whatdo-footer">
+        <p>© 2026 Explore Tabasco · Mexico World Cup 2026</p>
+    </footer>
+
+</div>
