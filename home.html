@@ -1,0 +1,910 @@
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+html,body{
+  width:100%;
+  background:#faf7f0;
+  font-family:'DM Sans',sans-serif;
+  color:#1f3d2b;
+  overflow-x:hidden;
+}
+
+.home-page{background:#faf7f0;width:100%}
+
+/* HERO */
+.home-hero{
+  position:relative;
+  min-height:560px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+
+.home-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url("https://i.postimg.cc/28C3k1Ry/3g-Sm2.jpg");
+  background-size:cover;
+  background-position:center;
+  animation:slowZoom 18s ease-in-out infinite alternate;
+}
+
+.home-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(0,0,0,.40),rgba(0,0,0,.60));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:40px;
+}
+
+.hero-content h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(56px,9vw,110px);
+  line-height:1;
+  margin-bottom:18px;
+}
+
+.hero-content p{
+  max-width:820px;
+  margin:auto;
+  font-size:20px;
+  line-height:1.6;
+  color:#f4eadc;
+  font-weight:500;
+}
+
+@keyframes slowZoom{
+  from{transform:scale(1)}
+  to{transform:scale(1.035)}
+}
+
+/* IMAGE CREDITS */
+.image-wrap{
+  position:relative;
+  width:100%;
+}
+
+.image-wrap img{
+  width:100%;
+  display:block;
+}
+
+.image-credit,
+.hero-credit{
+  position:absolute;
+  right:-10px;
+  bottom:32%;
+  z-index:5;
+  background:rgba(0,0,0,.70);
+  padding:3px 6px;
+  border-radius:2px;
+  font-size:8px;
+  line-height:1;
+  font-weight:700;
+  color:#fff;
+}
+
+.image-credit{
+  right:10px;
+  bottom:32%;
+}
+
+.hero-credit{
+  right:18px;
+  bottom:18px;
+  font-size:11px;
+  padding:6px 10px;
+}
+
+.image-credit span,
+.hero-credit span{
+  color:#fff;
+}
+
+.image-credit a,
+.hero-credit a{
+  color:#ffffff;
+  text-decoration:underline;
+  font-weight:800;
+}
+
+/* STATS */
+.stats{
+  background:#1f3d2b;
+  padding:22px 20px;
+}
+
+.stats-grid{
+  max-width:980px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  text-align:center;
+}
+
+.stat{
+  border-right:1px solid rgba(255,255,255,.18);
+  padding:8px 10px;
+  opacity:0;
+  transform:translateY(12px);
+  animation:fadeUp .7s ease forwards;
+}
+
+.stat:nth-child(2){animation-delay:.12s}
+.stat:nth-child(3){animation-delay:.24s}
+.stat:nth-child(4){animation-delay:.36s}
+.stat:last-child{border-right:none}
+
+.stat strong{
+  display:block;
+  font-family:'Playfair Display',serif;
+  color:#f0c96a;
+  font-size:clamp(26px,4vw,44px);
+  line-height:1;
+  white-space:nowrap;
+}
+
+.stat span{
+  display:block;
+  margin-top:7px;
+  color:rgba(255,255,255,.65);
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+@keyframes fadeUp{
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* SEPARATORS */
+.sep-bar{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  margin:38px 0 4px;
+}
+
+.sep-bar-thick{
+  width:80px;
+  height:3px;
+  border-radius:2px;
+  background:linear-gradient(to right,transparent,#c9922a,transparent);
+}
+
+.sep-bar-thin{
+  width:160px;
+  height:.5px;
+  background:linear-gradient(to right,transparent,rgba(201,146,42,.4),transparent);
+}
+
+.essence-dots{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  margin:24px 0 36px;
+}
+
+.essence-dots span{
+  width:4px;
+  height:4px;
+  border-radius:50%;
+}
+
+.essence-dots span:nth-child(1),
+.essence-dots span:nth-child(5){
+  background:rgba(201,146,42,.3);
+}
+
+.essence-dots span:nth-child(2),
+.essence-dots span:nth-child(4){
+  background:rgba(201,146,42,.55);
+}
+
+.essence-dots .center{
+  width:7px;
+  height:7px;
+  background:#c9922a;
+}
+
+.sep-diamonds{
+  display:flex;
+  align-items:center;
+  width:100%;
+  max-width:720px;
+  margin:0 auto 26px;
+}
+
+.sep-line{
+  flex:1;
+  height:1px;
+  background:rgba(201,146,42,.35);
+}
+
+.sep-diamond{
+  width:10px;
+  height:10px;
+  background:#c9922a;
+  transform:rotate(45deg);
+  margin:0 6px;
+  flex-shrink:0;
+}
+
+.sep-diamond.hollow{
+  background:transparent;
+  border:1.5px solid #c9922a;
+}
+
+.destinations-eyebrow{
+  color:#1f3d2b;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  text-align:center;
+  margin-bottom:18px;
+}
+
+/* GENERAL */
+.content{
+  padding:70px 7%;
+}
+
+.section-title{
+  margin-bottom:34px;
+  text-align:center;
+}
+
+.section-title h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(36px,5vw,58px);
+  margin-bottom:12px;
+  color:#1f3d2b;
+}
+
+.section-title p{
+  max-width:780px;
+  margin:auto;
+  color:#5d6c60;
+  font-size:17px;
+  line-height:1.6;
+}
+
+/* INTRO */
+.intro-section{
+  display:grid;
+  grid-template-columns:1fr 1.05fr;
+  gap:44px;
+  align-items:center;
+}
+
+.video-card{width:100%}
+
+.video-card iframe{
+  width:100%;
+  aspect-ratio:16/9;
+  border:0;
+  border-radius:16px;
+  display:block;
+}
+
+.intro-text h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,5vw,54px);
+  line-height:1.08;
+  margin-bottom:20px;
+}
+
+.intro-text p{
+  color:#5f6f63;
+  line-height:1.75;
+  font-size:17px;
+  margin-bottom:16px;
+}
+
+/* ESSENCE */
+.essence-section{
+  background:#e5f2ea;
+  padding:75px 6% 90px;
+  overflow:visible;
+}
+
+.essence-grid{
+  max-width:1120px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+  padding:20px 8px 35px;
+  overflow:visible;
+}
+
+.essence-card{
+  background:white;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 14px 28px rgba(31,61,43,.16);
+  transition:.3s ease;
+}
+
+.essence-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 24px 42px rgba(31,61,43,.24);
+}
+
+.essence-card img{
+  width:100%;
+  display:block;
+}
+
+/* DESTINATIONS */
+.destinations-section{
+  padding:75px 6%;
+  background:#faf7f0;
+  overflow:visible;
+}
+
+.carousel-box{
+  max-width:1320px;
+  margin:auto;
+  padding:20px 40px 55px;
+  position:relative;
+  overflow:visible;
+}
+
+.carousel-track{
+  display:flex;
+  gap:24px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+  padding:28px 8px 55px;
+  cursor:grab;
+}
+
+.carousel-track::-webkit-scrollbar{display:none}
+
+.place-card{
+  flex:0 0 340px;
+  border-radius:18px;
+  overflow:hidden;
+  background:#e8f3eb;
+  box-shadow:0 10px 22px rgba(31,61,43,.13);
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.place-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 18px 34px rgba(31,61,43,.22);
+}
+
+.place-card img{
+  width:100%;
+  display:block;
+  pointer-events:none;
+}
+
+.carousel-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:50%;
+  background:#faf7f0;
+  color:#1f3d2b;
+  font-size:30px;
+  cursor:pointer;
+  box-shadow:0 8px 22px rgba(0,0,0,.16);
+  z-index:5;
+}
+
+.carousel-btn:hover{background:white}
+.prev{left:14px}
+.next{right:14px}
+
+/* CTA */
+.cta-section{
+  background:
+    radial-gradient(circle at center,rgba(240,201,106,.20) 0%,rgba(240,201,106,0) 45%),
+    linear-gradient(135deg,#052918 0%,#0b5a38 50%,#173f2b 100%);
+  padding:70px 6%;
+}
+
+.cta-box{
+  max-width:1100px;
+  margin:0 auto;
+  text-align:center;
+  padding:45px 28px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.cta-eyebrow{
+  color:#f0c96a;
+  font-size:16px;
+  font-weight:800;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  margin-bottom:18px;
+  text-align:center;
+}
+
+.cta-title{
+  color:white;
+  font-family:'Playfair Display',serif;
+  font-size:clamp(40px,6vw,58px);
+  line-height:1.15;
+  max-width:900px;
+  margin:0 auto 24px;
+  text-align:center;
+}
+
+.cta-text{
+  color:rgba(255,255,255,.76);
+  font-size:clamp(16px,1.8vw,22px);
+  line-height:1.8;
+  max-width:760px;
+  margin:0 auto;
+  text-align:center;
+}
+
+/* FOOTER */
+.home-footer{
+  width:100%;
+  background:#1f3d2b;
+  color:#faf7f0;
+  padding:45px 20px;
+  text-align:center;
+  border-top:4px solid #d9a441;
+}
+
+.home-footer p{
+  color:#d9d2c5;
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .intro-section,
+  .essence-grid{
+    grid-template-columns:1fr;
+  }
+
+  .essence-grid{max-width:620px}
+  .content{padding:55px 6%}
+  .home-hero{min-height:460px}
+}
+
+@media(max-width:650px){
+  .stats-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+  }
+
+  .stat{border-right:none}
+
+  .essence-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+  }
+
+  .carousel-box{padding:20px 42px 50px}
+
+  .place-card{flex-basis:245px}
+
+  .hero-content h1{font-size:54px}
+  .hero-content p{font-size:17px}
+
+  .image-credit{
+    bottom:30%;
+    font-size:8.5px;
+    padding:4px 6px;
+  }
+}
+</style>
+
+<div class="home-page">
+
+  <section class="home-hero">
+    <div class="hero-content">
+      <h1>Explore Tabasco</h1>
+      <p>
+        Tabasco waits for you with jungle, chocolate, and adventure for the whole family. Come live it!
+      </p>
+    </div>
+
+    <div class="hero-credit">
+      <span>Photo:</span>
+      <a href="https://www.vecteezy.com/free-photos/jungle" target="_blank" rel="noopener">Vecteezy</a>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stats-grid">
+      <div class="stat">
+        <strong class="number" data-target="24661" data-suffix=" km²">0</strong>
+        <span>of nature</span>
+      </div>
+
+      <div class="stat">
+        <strong class="number" data-target="3000" data-suffix="+">0</strong>
+        <span>years of history</span>
+      </div>
+
+      <div class="stat">
+        <strong class="number" data-target="100" data-suffix="+">0</strong>
+        <span>rivers & waterways</span>
+      </div>
+
+      <div class="stat">
+        <strong class="number">1°</strong>
+        <span>birthplace of cacao</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep-bar">
+    <div class="sep-bar-thin"></div>
+    <div class="sep-bar-thick"></div>
+    <div class="sep-bar-thin"></div>
+  </div>
+
+  <main>
+
+    <section class="content">
+      <div class="intro-section">
+
+        <div class="video-card">
+          <iframe
+            src="https://www.youtube.com/embed/duWoF0lW3ng"
+            title="Explore Tabasco"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="intro-text">
+          <h2>Where nature, culture and adventure come together.</h2>
+
+          <p>
+            Tabasco is a state in southeastern Mexico unlike any other. Home to lush green jungles, winding rivers, and a warmth that extends far beyond its tropical climate, it offers visitors a truly unforgettable experience. The people are friendly, the cuisine is extraordinary, and the region's rich history dates back to the ancient Olmec civilization.
+          </p>
+
+          <p>
+            Whether you're swimming in crystal-clear waterfalls or spotting jaguars and monkeys in their natural habitat, Tabasco offers authentic adventures for families, couples, and solo travelers alike.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="essence-section">
+      <div class="section-title">
+        <h2>The Essence of Tabasco</h2>
+
+        <p>
+          Discover the natural beauty, cultural heritage, traditional flavors,
+          and unforgettable experiences that make Tabasco special.
+        </p>
+
+        <div class="essence-dots">
+          <span></span>
+          <span></span>
+          <span class="center"></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="essence-grid">
+        <div class="essence-card">
+          <div class="image-wrap">
+            <img src="https://i.postimg.cc/PqNczX1J/1E.png" alt="Nature">
+            <div class="image-credit">
+              <span>Photo:</span>
+              <a href="https://www.travelmexico.travel/estado/tabasco/" target="_blank" rel="noopener">Travel Mexico</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="essence-card">
+          <div class="image-wrap">
+            <img src="https://i.postimg.cc/d0DXmsG1/2E.png" alt="Culture">
+            <div class="image-credit">
+              <span>Photo:</span>
+              <a href="https://tabasco.gob.mx/cultura" target="_blank" rel="noopener">Portal Tabasco</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="essence-card">
+          <div class="image-wrap">
+            <img src="https://i.postimg.cc/CKdtHhbK/3E.png" alt="Gastronomy">
+            <div class="image-credit">
+              <span>Photo:</span>
+              <a href="https://diarioavancetabasco.com/?p=394503" target="_blank" rel="noopener">Diario Avance</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="essence-card">
+          <div class="image-wrap">
+            <img src="https://i.postimg.cc/3wW6C82r/4E.png" alt="Traditions">
+            <div class="image-credit">
+              <span>Photo:</span>
+              <a href="https://diarioavancetabasco.com/?p=394503" target="_blank" rel="noopener">Diario Avance</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="destinations-section">
+
+      <div class="sep-diamonds">
+        <div class="sep-line"></div>
+        <div class="sep-diamond"></div>
+        <div class="sep-diamond hollow"></div>
+        <div class="sep-diamond"></div>
+        <div class="sep-line"></div>
+      </div>
+
+      <div class="destinations-eyebrow">
+        TOP PLACES TO EXPLORE
+      </div>
+
+      <div class="section-title">
+        <h2>Must-See Destinations</h2>
+        <p>
+          Explore some of the most iconic places in Tabasco, from ancient
+          archaeological sites to waterfalls, rivers, museums, and magical towns.
+        </p>
+      </div>
+
+      <div class="carousel-box">
+        <button class="carousel-btn prev" onclick="moveCarousel(-1)">‹</button>
+
+        <div class="carousel-track" id="carouselTrack">
+
+          <div class="place-card">
+            <div class="image-wrap">
+              <img src="https://i.postimg.cc/C1sjRDds/Presentacion-Diapositivas-Economia-y-Finanzas-Ilustrativo-Verde-y-Amarillo-(12).png" alt="Destination 1">
+              <div class="image-credit">
+                <span>Photo:</span>
+                <a href="https://imagenagropecuaria.com/2023/anp-reserva-de-la-biosfera-wanha-en-tabasco-contara-con-38256-hectareas//" target="_blank" rel="noopener">Imagen Agropecuaria</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card">
+            <div class="image-wrap">
+              <img src="https://i.postimg.cc/LX3zJfhs/Presentacion-Diapositivas-Economia-y-Finanzas-Ilustrativo-Verde-y-Amarillo-(13).png" alt="Destination 2">
+              <div class="image-credit">
+                <span>Photo:</span>
+                <a href="https://www.instagram.com/p/DVUAsdZkpKv/?img_index=1" target="_blank" rel="noopener">Turismo tabasco</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card">
+            <div class="image-wrap">
+              <img src="https://i.postimg.cc/HsZ90Qzc/Presentacion-Diapositivas-Economia-y-Finanzas-Ilustrativo-Verde-y-Amarillo-(21).png" alt="Destination 3">
+              <div class="image-credit">
+                <span>Photo:</span>
+                <a href="https://www.turimexico.com/estados-de-la-republica-mexicana/tabasco-mexico/bellezas-naturales-en-tabasco/rio-boca-del-cerro-tabasco/" target="_blank" rel="noopener">TuriMexico</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card">
+            <div class="image-wrap">
+              <img src="https://i.postimg.cc/mgK3JB0k/Presentacion-Diapositivas-Economia-y-Finanzas-Ilustrativo-Verde-y-Amarillo-(15).png" alt="Destination 4">
+              <div class="image-credit">
+                <span>Photo:</span>
+                <a href="https://www.historiaysabor.mx/2017/11/toma-chocolate-en-el-8-festival_6.html" target="_blank" rel="noopener">Historia y Sabor</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card">
+            <div class="image-wrap">
+              <img src="https://i.postimg.cc/2SgdMrPC/Presentacion-Diapositivas-Economia-y-Finanzas-Ilustrativo-Verde-y-Amarillo-(16).png" alt="Destination 5">
+              <div class="image-credit">
+                <span>Photo:</span>
+                <a href="https://www.instagram.com/p/DXSLD0CCdcv/?img_index=4" target="_blank" rel="noopener">Aerocultura</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card">
+            <div class="image-wrap">
+              <img src="https://i.postimg.cc/Cx9CXSWS/Presentacion-Diapositivas-Economia-y-Finanzas-Ilustrativo-Verde-y-Amarillo-(17).png" alt="Destination 6">
+              <div class="image-credit">
+                <span>Photo:</span>
+                <a href="https://mercadotabasco.com/products/40-grutas-de-cocona-y-rio-puyacatengo-teapa-tabasco" target="_blank" rel="noopener">Mercado Tabasco</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card">
+            <div class="image-wrap">
+              <img src="https://i.postimg.cc/m2Xy3QjH/Presentacion-Diapositivas-Economia-y-Finanzas-Ilustrativo-Verde-y-Amarillo-(18).png" alt="Destination 7">
+              <div class="image-credit">
+                <span>Photo:</span>
+                <a href="https://www.instagram.com/p/DWpZeqojUif/?img_index=3" target="_blank" rel="noopener">Visite Tabasco</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card">
+            <div class="image-wrap">
+              <img src="https://i.postimg.cc/m2Xy3Qj9/Presentacion-Diapositivas-Economia-y-Finanzas-Ilustrativo-Verde-y-Amarillo-(19).png" alt="Destination 8">
+              <div class="image-credit">
+                <span>Photo:</span>
+                <a href="https://movimentistas.com/sostenibilidad/lugares-desconocidos-mexico/" target="_blank" rel="noopener">Movimentistas</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card">
+            <div class="image-wrap">
+              <img src="https://i.postimg.cc/vHqt7Wh6/Presentacion-Diapositivas-Economia-y-Finanzas-Ilustrativo-Verde-y-Amarillo-(20).png" alt="Destination 9">
+              <div class="image-credit">
+                <span>Photo:</span>
+                <a href="https://miviaje.com/las-sorpresas-del-estado-tabasco-mexico/" target="_blank" rel="noopener">Mi Viaje</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-card">
+            <div class="image-wrap">
+              <img src="https://i.postimg.cc/prVKzTnJ/Presentacion-Diapositivas-Economia-y-Finanzas-Ilustrativo-Verde-y-Amarillo-(7).png" alt="Destination 10">
+              <div class="image-credit">
+                <span>Photo:</span>
+                <a href="https://novedadesdetabasco.com.mx/2025/03/04/parque-museo-la-venta-celebra-67-anos/" target="_blank" rel="noopener">Novedades de Tabasco</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-btn next" onclick="moveCarousel(1)">›</button>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-box">
+        <div class="cta-eyebrow">Ready to explore?</div>
+
+        <h2 class="cta-title">
+          Discover a side of Mexico you've never seen before.
+        </h2>
+
+        <p class="cta-text">
+          Explore waterfalls, archaeological sites, unique flavors, and unforgettable
+          experiences waiting for you. Every corner of Tabasco tells a story worth discovering.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="home-footer">
+    <p>© 2026 Explore Tabasco · Mexico World Cup 2026</p>
+  </footer>
+
+</div>
+
+<script>
+function countUp(el){
+  const target = Number(el.dataset.target);
+  const suffix = el.dataset.suffix || "";
+  const duration = 1500;
+  const startTime = performance.now();
+
+  function update(now){
+    const progress = Math.min((now - startTime) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = Math.round(target * eased);
+
+    el.textContent = value.toLocaleString("en-US") + suffix;
+
+    if(progress < 1){
+      requestAnimationFrame(update);
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+document.querySelectorAll(".number[data-target]").forEach(countUp);
+
+const track = document.getElementById('carouselTrack');
+const originalCards = track.innerHTML;
+track.innerHTML += originalCards;
+
+function moveCarousel(direction){
+  const card = track.querySelector('.place-card');
+  const amount = card.offsetWidth + 24;
+
+  track.scrollBy({
+    left: direction * amount,
+    behavior:'smooth'
+  });
+}
+
+let isDown = false;
+let startX = 0;
+let scrollLeft = 0;
+
+track.addEventListener('mousedown', function(e){
+  isDown = true;
+  startX = e.pageX - track.offsetLeft;
+  scrollLeft = track.scrollLeft;
+});
+
+track.addEventListener('mouseleave', function(){
+  isDown = false;
+});
+
+track.addEventListener('mouseup', function(){
+  isDown = false;
+});
+
+track.addEventListener('mousemove', function(e){
+  if(!isDown) return;
+
+  e.preventDefault();
+
+  const x = e.pageX - track.offsetLeft;
+  const walk = (x - startX) * 2;
+  track.scrollLeft = scrollLeft - walk;
+});
+
+track.addEventListener('touchstart', function(e){
+  startX = e.touches[0].pageX - track.offsetLeft;
+  scrollLeft = track.scrollLeft;
+}, {passive:true});
+
+track.addEventListener('touchmove', function(e){
+  const x = e.touches[0].pageX - track.offsetLeft;
+  const walk = (x - startX) * 1.5;
+  track.scrollLeft = scrollLeft - walk;
+}, {passive:true});
+
+let isLooping = false;
+
+track.addEventListener('scroll', function(){
+  if(isLooping) return;
+
+  const halfway = track.scrollWidth / 2;
+
+  if(track.scrollLeft >= halfway - 5){
+    isLooping = true;
+    track.style.scrollBehavior = 'auto';
+    track.scrollLeft = track.scrollLeft - halfway;
+    track.style.scrollBehavior = '';
+    setTimeout(() => isLooping = false, 50);
+  }
+});
+</script>

@@ -1,0 +1,489 @@
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+html,body{
+  width:100%;
+  background:#faf7f0;
+  font-family:'DM Sans',sans-serif;
+  color:#1f3d2b;
+  overflow-x:hidden;
+}
+
+.travel-page{
+  background:#faf7f0;
+  width:100%;
+}
+
+/* HERO */
+.travel-hero{
+  position:relative;
+  min-height:520px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+
+.travel-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url("https://i.postimg.cc/c4b51qpC/d8kcs.jpg");
+  background-size:cover;
+  background-position:center;
+  animation:slowZoom 18s ease-in-out infinite alternate;
+}
+
+.travel-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.60));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:40px;
+}
+
+.hero-content span{
+  display:inline-block;
+  background:#d9a441;
+  color:#1f3329;
+  padding:9px 20px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:13px;
+  letter-spacing:.9px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+.hero-content h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(50px,8vw,100px);
+  line-height:1;
+  margin-bottom:18px;
+}
+
+.hero-content p{
+  max-width:760px;
+  margin:auto;
+  font-size:19px;
+  line-height:1.6;
+  color:#f4eadc;
+}
+
+@keyframes slowZoom{
+  from{transform:scale(1)}
+  to{transform:scale(1.03)}
+}
+
+/* GENERAL */
+.content{
+  padding:60px 7%;
+}
+
+.section-title{
+  margin-bottom:28px;
+}
+
+.section-title h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(34px,5vw,56px);
+  margin-bottom:10px;
+}
+
+.section-title p{
+  max-width:760px;
+  color:#5d6c60;
+  font-size:17px;
+  line-height:1.6;
+}
+
+/* TRAVEL ESSENTIALS */
+.essentials-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-bottom:65px;
+}
+
+.essential-card{
+  background:white;
+  border-radius:30px;
+  padding:32px;
+  min-height:260px;
+  box-shadow:0 16px 36px rgba(31,61,43,.12);
+  border:1px solid rgba(31,61,43,.08);
+  transition:.3s ease;
+}
+
+.essential-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 50px rgba(31,61,43,.20);
+}
+
+.essential-icon{
+  width:66px;
+  height:66px;
+  border-radius:22px;
+  background:#1f3d2b;
+  color:#faf7f0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+.essential-card.gold .essential-icon{
+  background:#d9a441;
+  color:#1f3329;
+}
+
+.essential-card h3{
+  font-size:24px;
+  margin-bottom:13px;
+}
+
+.essential-card p{
+  color:#5f6f63;
+  line-height:1.6;
+  font-size:16px;
+}
+
+/* LOCAL TIPS */
+.tips-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:26px;
+  margin-bottom:65px;
+}
+
+.tip-image-card{
+  background:white;
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 18px 45px rgba(31,61,43,.15);
+  transition:.3s ease;
+}
+
+.tip-image-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 28px 60px rgba(31,61,43,.22);
+}
+
+.tip-image-card img{
+  width:100%;
+  display:block;
+}
+
+/* EMERGENCY */
+.emergency-box{
+  background:#1f3d2b;
+  color:#faf7f0;
+  border-radius:34px;
+  padding:36px;
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:24px;
+  align-items:center;
+  margin-bottom:65px;
+  box-shadow:0 20px 50px rgba(31,61,43,.22);
+}
+
+.emergency-box h2{
+  font-family:'Playfair Display',serif;
+  font-size:40px;
+  margin-bottom:8px;
+}
+
+.emergency-box p{
+  color:#e8decf;
+  line-height:1.5;
+}
+
+.phone{
+  background:#faf7f0;
+  color:#1f3d2b;
+  border-radius:24px;
+  padding:25px;
+  text-align:center;
+}
+
+.phone strong{
+  display:block;
+  font-size:50px;
+  color:#d9a441;
+  line-height:1;
+  margin-bottom:8px;
+}
+
+/* FAQS */
+.faq-accordion{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+
+.faq-item{
+  background:white;
+  border-radius:20px;
+  box-shadow:0 12px 30px rgba(31,61,43,.09);
+  border-left:6px solid #d9a441;
+  overflow:hidden;
+}
+
+.faq-item summary{
+  cursor:pointer;
+  list-style:none;
+  padding:20px 22px;
+  font-size:17px;
+  font-weight:800;
+  color:#1f3d2b;
+  position:relative;
+  padding-right:50px;
+}
+
+.faq-item summary::-webkit-details-marker{
+  display:none;
+}
+
+.faq-item summary::after{
+  content:"+";
+  position:absolute;
+  right:22px;
+  top:50%;
+  transform:translateY(-50%);
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:#1f3d2b;
+  color:#faf7f0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  font-weight:800;
+}
+
+.faq-item[open] summary::after{
+  content:"−";
+  background:#d9a441;
+  color:#1f3329;
+}
+
+.faq-item p{
+  padding:0 22px 22px;
+  color:#5f6f63;
+  line-height:1.55;
+  font-size:15px;
+}
+
+/* FOOTER */
+.travel-footer{
+  width:100%;
+  background:#1f3d2b;
+  color:#faf7f0;
+  padding:70px 20px 60px;
+  text-align:center;
+  border-top:4px solid #d9a441;
+}
+
+.footer-content{
+  max-width:900px;
+  margin:auto;
+}
+
+.footer-content h3{
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  margin-bottom:16px;
+}
+
+.footer-content p{
+  color:#d9d2c5;
+  line-height:1.7;
+  font-size:16px;
+  max-width:700px;
+  margin:0 auto 24px;
+}
+
+.footer-line{
+  width:90px;
+  height:3px;
+  background:#d9a441;
+  margin:0 auto 24px;
+  border-radius:999px;
+}
+
+.footer-content span{
+  color:#b9c0ba;
+  font-size:14px;
+  letter-spacing:.3px;
+}
+
+@media(max-width:1000px){
+  .essentials-grid,
+  .tips-gallery,
+  .emergency-box{
+    grid-template-columns:1fr;
+  }
+
+  .content{
+    padding:48px 6%;
+  }
+
+  .travel-hero{
+    min-height:430px;
+  }
+
+  .faq-accordion{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+
+<div class="travel-page">
+
+  <section class="travel-hero">
+    <div class="hero-content">
+      <span>Plan your trip</span>
+      <h1>Travel Essentials</h1>
+      <p>
+        Everything visitors should know before exploring Tabasco: what to bring,
+        how to prepare, local safety tips, and useful travel information.
+      </p>
+    </div>
+  </section>
+
+  <main class="content">
+
+    <section>
+      <div class="section-title">
+        <h2>Travel Essentials</h2>
+        <p>Basic information to help visitors prepare before traveling around Tabasco.</p>
+      </div>
+
+      <div class="essentials-grid">
+        <div class="essential-card gold">
+          <div class="essential-icon">🎒</div>
+          <h3>What to Pack</h3>
+          <p>Bring light clothing, sunscreen, sunglasses, insect repellent, comfortable shoes, a hat, and an umbrella for sun or rain.</p>
+        </div>
+
+        <div class="essential-card">
+          <div class="essential-icon">💵</div>
+          <h3>Currency</h3>
+          <p>The local currency is the Mexican peso. Cards are accepted in many hotels and restaurants, but cash is recommended for small businesses.</p>
+        </div>
+
+        <div class="essential-card gold">
+          <div class="essential-icon">🧾</div>
+          <h3>Budget</h3>
+          <p>Some attractions, food stands, local transportation, and extra activities may require additional money. Plan ahead and carry cash.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h2>Local Tips & Insights</h2>
+        <p>Visual travel tips for enjoying Tabasco’s nature, weather, and cultural areas responsibly.</p>
+      </div>
+
+      <div class="tips-gallery">
+        <div class="tip-image-card"><img src="https://i.postimg.cc/Wbv19KW4/Chat-GPT-Image-4-jun-2026-01-49-36-p-m.png"></div>
+        <div class="tip-image-card"><img src="https://i.postimg.cc/YqHCXVnk/Chat-GPT-Image-4-jun-2026-01-49-40-p-m.png"></div>
+        <div class="tip-image-card"><img src="https://i.postimg.cc/jqNj4KX0/Chat-GPT-Image-4-jun-2026-01-49-41-p-m.png"></div>
+        <div class="tip-image-card"><img src="https://i.postimg.cc/9XTfYVBs/Chat-GPT-Image-4-jun-2026-01-49-42-p-m.png"></div>
+        <div class="tip-image-card"><img src="https://i.postimg.cc/J7Jh5mQf/Chat-GPT-Image-4-jun-2026-01-49-44-p-m.png"></div>
+        <div class="tip-image-card"><img src="https://i.postimg.cc/VsMNW1Ry/Chat-GPT-Image-4-jun-2026-01-49-46-p-m.png"></div>
+      </div>
+    </section>
+
+    <section class="emergency-box">
+      <div>
+        <h2>Emergency Numbers</h2>
+        <p>Save these numbers before traveling around Tabasco.</p>
+      </div>
+
+      <div class="phone">
+        <strong>911</strong>
+        Emergency Services
+      </div>
+
+      <div class="phone">
+        <strong>078</strong>
+        Green Angels
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h2>FAQs</h2>
+        <p>Quick answers for visitors planning their trip to Tabasco.</p>
+      </div>
+
+      <div class="faq-accordion">
+
+        <details class="faq-item"><summary>What should I wear in Tabasco?</summary><p>Light, comfortable clothes and breathable fabrics are recommended because the weather is hot and humid.</p></details>
+
+        <details class="faq-item"><summary>Can I drink tap water?</summary><p>It is better to drink bottled or purified water during your trip.</p></details>
+
+        <details class="faq-item"><summary>Is it safe to visit natural attractions?</summary><p>Yes, but visitors should follow local guides, stay with their group, and avoid swimming in unknown areas.</p></details>
+
+        <details class="faq-item"><summary>Do I need insect repellent?</summary><p>Yes. It is especially useful in parks, rivers, jungles, natural areas, and during the evening.</p></details>
+
+        <details class="faq-item"><summary>What is the weather like in Tabasco?</summary><p>Tabasco has a hot and humid tropical climate, so visitors should wear light clothing and stay hydrated.</p></details>
+
+        <details class="faq-item"><summary>What should I pack for Tabasco?</summary><p>Light clothing, sunscreen, sunglasses, insect repellent and comfortable shoes are recommended because of the hot and humid weather.</p></details>
+
+        <details class="faq-item"><summary>What food should visitors try in Tabasco?</summary><p>Tourists should try traditional dishes such as pejelagarto, tamales and Tabasco-style chocolate drinks.</p></details>
+
+        <details class="faq-item"><summary>How can I travel to Tabasco from World Cup host cities?</summary><p>Visitors can travel to Tabasco by plane or bus from major host cities such as Mexico City, Monterrey and Guadalajara.</p></details>
+
+        <details class="faq-item"><summary>Is transportation available for tourists?</summary><p>Yes. Visitors can use taxis, buses and transportation apps in many areas.</p></details>
+
+        <details class="faq-item"><summary>What archaeological or ecotourism sites can I visit in Tabasco?</summary><p>You can visit Comalcalco, La Venta, Pantanos de Centla, and Agua Selva.</p></details>
+
+        <details class="faq-item"><summary>Are there flood problems in certain times of the year?</summary><p>Yes, from October to November. Check the weather before you travel.</p></details>
+
+        <details class="faq-item"><summary>What health precautions should I take because of the hot weather?</summary><p>Use repellent, drink water, avoid sun from 11 am to 3 pm, and wear light long sleeves.</p></details>
+
+        <details class="faq-item"><summary>Are there days or times when shops or museums close?</summary><p>Many museums close on Mondays. Small shops close on Sunday afternoons.</p></details>
+
+        <details class="faq-item"><summary>What documents do I need if I travel from another country?</summary><p>Valid passport. If your country does not need a visa for Mexico, you fill out the FMM form.</p></details>
+
+        <details class="faq-item"><summary>What is the local currency? Do they accept cards or US dollars?</summary><p>Mexican peso (MXN). Cards are accepted in big hotels and restaurants. US dollars are not commonly accepted. Bring cash.</p></details>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="travel-footer">
+    <div class="footer-content">
+      <h3>Discover Tabasco</h3>
+
+      <p>
+        From ancient Olmec heritage and archaeological wonders to tropical
+        rainforests, waterfalls, rivers, and authentic gastronomy,
+        Tabasco offers unforgettable experiences for every traveler.
+      </p>
+
+      <div class="footer-line"></div>
+
+      <span>
+        © 2026 Explore Tabasco · Mexico World Cup 2026 
+      </span>
+    </div>
+  </footer>
+
+</div>
